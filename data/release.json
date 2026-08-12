@@ -1,15 +1,15 @@
 {
-  "version": "1.557.0",
-  "published": "2026-08-12T09:17:35Z",
+  "version": "1.558.0",
+  "published": "2026-08-12T18:58:33Z",
   "windows": {
-    "name": "Ponoi-Setup-1.557.0.exe",
-    "url": "https://github.com/Neylivo/neylivo/releases/download/v1.557.0/Ponoi-Setup-1.557.0.exe",
-    "bytes": 199487996
+    "name": "NeyLivo-Setup-1.558.0.exe",
+    "url": "https://github.com/Neylivo/neylivo/releases/download/v1.558.0/NeyLivo-Setup-1.558.0.exe",
+    "bytes": 199729278
   },
   "android": {
-    "name": "Ponoi-Setup-1.557.0.apk",
-    "url": "https://github.com/Neylivo/neylivo/releases/download/v1.557.0/Ponoi-Setup-1.557.0.apk",
-    "bytes": 16715276
+    "name": "NeyLivo-Setup-1.558.0.apk",
+    "url": "https://github.com/Neylivo/neylivo/releases/download/v1.558.0/NeyLivo-Setup-1.558.0.apk",
+    "bytes": 18255792
   },
-  "fetchedAt": "2026-08-12T18:56:03.870Z"
+  "fetchedAt": "2026-08-12T18:59:08.942Z"
 }
