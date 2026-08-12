@@ -1,0 +1,65 @@
+name: deploy
+
+# Сайт Ponoi. Собирается и выкладывается сам:
+#   - при изменении в main;
+#   - по расписанию, потому что версия и ссылки на файлы берутся из последнего
+#     выпуска приложения, а он выходит в ДРУГОМ репозитории и об изменении
+#     здесь никто не узнает;
+#   - по кнопке;
+#   - по сигналу извне (repository_dispatch) — если владелец добавит в
+#     репозиторий приложения шаг, который дёргает этот, сайт обновится сразу
+#     после выпуска, а не в ближайшую проверку по расписанию.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [ponoi-release]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Build
+        # GITHUB_TOKEN — чтобы запрос к GitHub за последним выпуском не упёрся в
+        # ограничение для анонимных запросов, когда сборка идёт часто.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node build.mjs
+
+      - name: Check the built site
+        # Проверка ссылок, заголовков, описаний, JSON-LD и карты сайта. Падение
+        # здесь останавливает выкладку: лучше вчерашний сайт, чем сегодняшний
+        # со ссылками в никуда.
+        run: node check.mjs
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

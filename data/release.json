@@ -1,0 +1,15 @@
+{
+  "version": "1.556.1",
+  "published": "2026-08-11T23:49:26Z",
+  "windows": {
+    "name": "Ponoi-Setup-1.556.1.exe",
+    "url": "https://github.com/ponoiai/ponoi/releases/download/v1.556.1/Ponoi-Setup-1.556.1.exe",
+    "bytes": 199472887
+  },
+  "android": {
+    "name": "Ponoi-Setup-1.556.1.apk",
+    "url": "https://github.com/ponoiai/ponoi/releases/download/v1.556.1/Ponoi-Setup-1.556.1.apk",
+    "bytes": 16710780
+  },
+  "fetchedAt": "2026-08-12T00:37:27.305Z"
+}
