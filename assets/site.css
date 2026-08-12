@@ -232,21 +232,49 @@ section { padding: 0; }
   .hero-grid { grid-template-columns: 1.05fr .95fr; gap: 56px; }
 }
 
-/* Куб на первом экране — тот же знак, крупно и спокойно. */
-.hero-art {
-  position: relative; display: grid; place-items: center;
-  aspect-ratio: 1 / .82; border: 1px solid var(--rule); border-radius: 16px;
-  background:
-    linear-gradient(0deg, transparent 0 calc(100% - 1px), var(--rule) 100%) 0 0 / 100% 34px,
-    linear-gradient(90deg, transparent 0 calc(100% - 1px), var(--rule) 100%) 0 0 / 34px 100%,
-    var(--card);
-  overflow: hidden;
+/* ── Снимки приложения ────────────────────────────────────────────────
+ *
+ * На первом экране стоит НАСТОЯЩИЙ снимок приложения, а не знак: человек
+ * должен за пять секунд понять, что это, и увидеть, как оно выглядит. Раньше
+ * тут был крупный куб с подписью «знак Ponoi» — красиво и бесполезно.
+ *
+ * Снимки сняты настоящими компонентами приложения (ponoi/scripts/site-shots.mjs),
+ * а не нарисованы: рисованный интерфейс всегда аккуратнее настоящего, и это
+ * ровно тот способ соврать картинкой, за который на сайте ругаться будут по делу.
+ */
+
+/* Рамка окна: тонкая полоска с тремя точками. Не подделка под чужую
+   операционную систему — просто признак «это окно приложения». */
+.win {
+  border: 1px solid var(--rule-2); border-radius: 12px; overflow: hidden;
+  background: var(--card); box-shadow: 0 24px 60px -40px rgba(8, 12, 18, .8);
 }
-.hero-art .cube { width: min(62%, 320px); color: var(--accent); opacity: .95; }
-.hero-art figcaption {
-  position: absolute; left: 14px; bottom: 12px;
-  font-family: var(--mono); font-size: 12px; color: var(--mut);
+.win-bar {
+  display: flex; gap: 6px; align-items: center;
+  padding: 9px 12px; border-bottom: 1px solid var(--rule);
+  background: var(--paper-2);
 }
+.win-bar span { width: 9px; height: 9px; border-radius: 50%; background: var(--rule-2); }
+.win img { display: block; width: 100%; height: auto; }
+
+.hero-shot { margin: 0; }
+.hero-shot figcaption {
+  margin-top: 10px; font-size: 13.5px; color: var(--mut); max-width: 46ch;
+}
+
+.shots { display: grid; gap: 26px; margin-top: 26px; align-items: start; }
+@media (min-width: 900px) { .shots { grid-template-columns: 1.7fr 1fr; gap: 34px; } }
+.shot-card { margin: 0; }
+.shot-card figcaption { margin-top: 10px; font-size: 13.5px; color: var(--mut); }
+
+/* Телефон — та же мысль: рамка ровно настолько, чтобы было видно, что это
+   телефон, и ни одного лишнего украшения. */
+.phone {
+  max-width: 300px; margin-inline: auto;
+  border: 1px solid var(--rule-2); border-radius: 26px; padding: 8px;
+  background: var(--paper-2); box-shadow: 0 24px 60px -40px rgba(8, 12, 18, .8);
+}
+.phone img { display: block; width: 100%; height: auto; border-radius: 19px; }
 
 /* ── Карточки и сетки ─────────────────────────────────────────────────── */
 

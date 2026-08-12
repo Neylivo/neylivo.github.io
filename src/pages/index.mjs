@@ -14,7 +14,10 @@ const t = {
     open: 'Open Web App',
     plat: 'Windows · Android · Web',
     other: 'Other platforms',
-    artCap: 'The Ponoi mark',
+    shotCap: 'A server with channels, a conversation and the member list — Ponoi on Windows.',
+    shotLight: 'The same server in the light theme.',
+    shotPhone: 'The same server on a phone.',
+    shotsH: 'This is what it looks like',
     freeNote: 'Free. No ads, no trackers, no account tiers.',
 
     whatH: 'What is Ponoi?',
@@ -73,7 +76,10 @@ const t = {
     open: 'Открыть в браузере',
     plat: 'Windows · Android · Веб',
     other: 'Другие платформы',
-    artCap: 'Знак Ponoi',
+    shotCap: 'Сервер с каналами, переписка и список участников — Ponoi на Windows.',
+    shotLight: 'Тот же сервер на светлой теме.',
+    shotPhone: 'Тот же сервер на телефоне.',
+    shotsH: 'Как это выглядит',
     freeNote: 'Бесплатно. Без рекламы, без слежки, без платных уровней.',
 
     whatH: 'Что такое Поной?',
@@ -207,9 +213,13 @@ export default {
       <p class="platline" style="margin-bottom:14px"><a href="${urlFor('download', lang)}">${s.other} →</a></p>
       <p class="platline"><b>${s.plat}</b> · ${s.ver} ${r.version} · ${s.freeNote}</p>
     </div>
-    <figure class="hero-art">
-      ${mark(320, 'cube')}
-      <figcaption>${s.artCap}</figcaption>
+    <figure class="hero-shot">
+      <div class="win">
+        <div class="win-bar"><span></span><span></span><span></span></div>
+        <img src="/assets/shots/server-dark.png" width="1440" height="900"
+             alt="${s.shotCap}" fetchpriority="high" decoding="async">
+      </div>
+      <figcaption>${s.shotCap}</figcaption>
     </figure>
   </div>
 </section>
@@ -227,6 +237,29 @@ export default {
 </section>
 
 <section class="band">
+  <div class="wrap">
+    <h2 class="mt0">${s.shotsH}</h2>
+    <div class="shots">
+      <figure class="shot-card">
+        <div class="win light">
+          <div class="win-bar"><span></span><span></span><span></span></div>
+          <img src="/assets/shots/server-light.png" width="1440" height="900"
+               alt="${s.shotLight}" loading="lazy" decoding="async">
+        </div>
+        <figcaption>${s.shotLight}</figcaption>
+      </figure>
+      <figure class="shot-card narrow">
+        <div class="phone">
+          <img src="/assets/shots/phone-server.png" width="412" height="892"
+               alt="${s.shotPhone}" loading="lazy" decoding="async">
+        </div>
+        <figcaption>${s.shotPhone}</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
   <div class="wrap">
     <h2 class="mt0">${s.fH}</h2>
     <div class="grid g3">
