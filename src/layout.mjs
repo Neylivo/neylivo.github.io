@@ -14,7 +14,7 @@ const esc = (s) => String(s)
 export { esc }
 
 /**
- * Знак Ponoi — настоящий логотип, а не «в духе».
+ * Знак NeyLivo — настоящий логотип, а не «в духе».
  *
  * До 12.08.2026 здесь был мой рисунок: шестиугольник с кубиком внутри, сделанный
  * на глаз по значку приложения. Владелец прислал настоящий логотип, и это
@@ -58,7 +58,7 @@ function footerHtml(lang) {
   return `<footer class="site-foot">
       <div class="wrap">
         <div class="f-brand">
-          <span class="f-logo">${mark(24)}<b>Ponoi</b></span>
+          <span class="f-logo">${mark(24)}<b>NeyLivo</b></span>
           <p>${esc(t.footerNote)}</p>
         </div>
         ${cols}
@@ -96,7 +96,7 @@ export function page(p) {
     (l) => `<link rel="alternate" hreflang="${l}" href="${ORIGIN + urlFor(slug, l)}">`,
   ).join('\n  ')
 
-  const ogImage = p.ogImage ?? `${ORIGIN}/assets/ponoi-og.png`
+  const ogImage = p.ogImage ?? `${ORIGIN}/assets/neylivo-og.png`
 
   return `<!doctype html>
 <html lang="${lang}" dir="ltr">
@@ -108,7 +108,7 @@ export function page(p) {
 <link rel="canonical" href="${url}">
 ${alts}
 <link rel="alternate" hreflang="x-default" href="${ORIGIN + urlFor(slug, 'en')}">
-<meta property="og:site_name" content="Ponoi">
+<meta property="og:site_name" content="NeyLivo">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
@@ -135,7 +135,7 @@ ${p.jsonld ? `<script type="application/ld+json">${p.jsonld}</script>` : ''}
 <a class="skip" href="#main">${esc(t.skip)}</a>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="${urlFor('', lang)}">${mark(26)}<span>Ponoi</span></a>
+    <a class="brand" href="${urlFor('', lang)}">${mark(26)}<span>NeyLivo</span></a>
     <nav class="nav-wide" aria-label="${lang === 'en' ? 'Main' : 'Основная навигация'}">
         ${navHtml(lang, slug)}
     </nav>

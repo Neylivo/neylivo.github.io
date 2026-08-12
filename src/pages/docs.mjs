@@ -2,12 +2,12 @@ import { urlFor, REPO_URL, APP_URL } from '../site.mjs'
 
 const t = {
   en: {
-    title: 'Ponoi Documentation',
-    desc: 'Documentation for Ponoi: the plugin format and API, security architecture, the release process and the source code.',
+    title: 'NeyLivo Documentation',
+    desc: 'Documentation for NeyLivo: the plugin format and API, security architecture, the release process and the source code.',
     h1: 'Documentation',
-    lede: 'Ponoi is developed in the open, and the technical documentation lives with the code it describes. This page is the index.',
+    lede: 'NeyLivo is developed in the open, and the technical documentation lives with the code it describes. This page is the index.',
 
-    userH: 'Using Ponoi',
+    userH: 'Using NeyLivo',
     userL: [
       ['Features', 'What the app can do, area by area.', 'features'],
       ['Download and install', 'Windows, Android and the web version, with system requirements.', 'download'],
@@ -16,7 +16,7 @@ const t = {
     ],
 
     devH: 'Building plugins',
-    devP: 'A plugin is a single <code>.ponoi</code> JavaScript file. The format, the whole API and the permission list are documented in the repository, and there is an editor inside the app that runs your code as you write it.',
+    devP: 'A plugin is a single <code>.neylivo</code> JavaScript file. The format, the whole API and the permission list are documented in the repository, and there is an editor inside the app that runs your code as you write it.',
     devL: [
       ['PLUGINS.md', 'The plugin format, the API and how isolation works.', REPO_URL + '/blob/main/PLUGINS.md'],
       ['Plugins on this site', 'What plugins can do and how permissions work, in prose.', null],
@@ -36,18 +36,18 @@ const t = {
       ['Repository', 'The whole application: client, database migrations and build workflows.', REPO_URL],
       ['Releases', 'Every version with its installer and APK.', REPO_URL + '/releases'],
       ['Changelog', 'What changed in each version.', 'changelog'],
-      ['README', 'What Ponoi is, what works today and what is still planned.', REPO_URL + '#readme'],
+      ['README', 'What NeyLivo is, what works today and what is still planned.', REPO_URL + '#readme'],
     ],
     note: 'Developer documentation is intentionally kept in the repository rather than copied onto this site: two copies of the same instructions drift apart, and the one on the website is always the stale one.',
   },
 
   ru: {
-    title: 'Документация Ponoi',
-    desc: 'Документация Ponoi (Поной): формат и API плагинов, устройство безопасности, порядок выпусков и исходный код.',
+    title: 'Документация NeyLivo',
+    desc: 'Документация NeyLivo (Нейливо): формат и API плагинов, устройство безопасности, порядок выпусков и исходный код.',
     h1: 'Документация',
-    lede: 'Ponoi разрабатывается открыто, и техническая документация лежит рядом с кодом, который описывает. Эта страница — указатель.',
+    lede: 'NeyLivo разрабатывается открыто, и техническая документация лежит рядом с кодом, который описывает. Эта страница — указатель.',
 
-    userH: 'Пользоваться Ponoi',
+    userH: 'Пользоваться NeyLivo',
     userL: [
       ['Возможности', 'Что приложение умеет, по областям.', 'features'],
       ['Скачать и установить', 'Windows, Android и веб-версия, с требованиями.', 'download'],
@@ -56,7 +56,7 @@ const t = {
     ],
 
     devH: 'Писать плагины',
-    devP: 'Плагин — один файл <code>.ponoi</code> на JavaScript. Формат, весь API и список разрешений описаны в репозитории, а внутри приложения есть редактор, который запускает ваш код прямо по ходу написания.',
+    devP: 'Плагин — один файл <code>.neylivo</code> на JavaScript. Формат, весь API и список разрешений описаны в репозитории, а внутри приложения есть редактор, который запускает ваш код прямо по ходу написания.',
     devL: [
       ['PLUGINS.md', 'Формат плагина, API и то, как устроена изоляция.', REPO_URL + '/blob/main/PLUGINS.md'],
       ['Плагины на этом сайте', 'Что умеют плагины и как работают разрешения — словами.', null],
@@ -76,7 +76,7 @@ const t = {
       ['Репозиторий', 'Всё приложение: клиент, миграции базы и сборочные процессы.', REPO_URL],
       ['Выпуски', 'Каждая версия с установщиком и APK.', REPO_URL + '/releases'],
       ['Что нового', 'Что изменилось в каждой версии.', 'changelog'],
-      ['README', 'Что такое Ponoi, что уже работает и что ещё нет.', REPO_URL + '#readme'],
+      ['README', 'Что такое NeyLivo, что уже работает и что ещё нет.', REPO_URL + '#readme'],
     ],
     note: 'Документация для разработчиков намеренно живёт в репозитории, а не переписана на сайт: две копии одних и тех же указаний расходятся, и устаревшей всегда оказывается та, что на сайте.',
   },

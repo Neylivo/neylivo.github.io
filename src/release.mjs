@@ -1,8 +1,8 @@
-// Сведения о последнем выпуске Ponoi.
+// Сведения о последнем выпуске NeyLivo.
 //
 // Зачем это здесь. Кнопка «Скачать» обязана вести на ФАЙЛ, а не на страницу
 // GitHub. Прямая ссылка на файл содержит версию в имени
-// (`Ponoi-Setup-1.556.1.exe`), поэтому её нельзя один раз написать руками:
+// (`NeyLivo-Setup-1.556.1.exe`), поэтому её нельзя один раз написать руками:
 // через месяц сайт раздавал бы устаревшее приложение.
 //
 // Поэтому версия берётся при каждой сборке из GitHub, а сборка запускается не
@@ -19,7 +19,7 @@ import { dirname, join } from 'node:path'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE = join(HERE, '..', 'data', 'release.json')
-const API = 'https://api.github.com/repos/ponoiai/ponoi/releases/latest'
+const API = 'https://api.github.com/repos/Neylivo/neylivo/releases/latest'
 
 const MB = 1024 * 1024
 
@@ -48,7 +48,7 @@ async function readCache() {
 export async function getRelease() {
   const cached = await readCache()
   try {
-    const headers = { 'accept': 'application/vnd.github+json', 'user-agent': 'ponoi-site-build' }
+    const headers = { 'accept': 'application/vnd.github+json', 'user-agent': 'neylivo-site-build' }
     if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`
     const r = await fetch(API, { headers, signal: AbortSignal.timeout(20000) })
     if (!r.ok) throw new Error('GitHub ответил ' + r.status)

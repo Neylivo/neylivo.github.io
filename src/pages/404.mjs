@@ -4,16 +4,16 @@
 
 export default {
   slug: '404',
-  title: () => 'Page not found — Ponoi',
-  description: () => 'This page does not exist. Links to the main pages of the Ponoi website.',
+  title: () => 'Page not found — NeyLivo',
+  description: () => 'This page does not exist. Links to the main pages of the NeyLivo website.',
 
   body: () => `
 <section class="page-head">
   <div class="wrap">
     <p class="eyebrow">404</p>
     <h1>Page not found<br><span lang="ru">Страница не найдена</span></h1>
-    <p class="lede">This address does not exist on the Ponoi website.<br>
-      <span lang="ru">Такого адреса на сайте Ponoi нет.</span></p>
+    <p class="lede">This address does not exist on the NeyLivo website.<br>
+      <span lang="ru">Такого адреса на сайте NeyLivo нет.</span></p>
   </div>
 </section>
 
@@ -23,7 +23,7 @@ export default {
       <h2 style="margin-top:0;font-size:19px">English</h2>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/about/">What is Ponoi?</a></li>
+        <li><a href="/about/">What is NeyLivo?</a></li>
         <li><a href="/download/">Download</a></li>
         <li><a href="/features/">Features</a></li>
         <li><a href="/security/">Security</a></li>
@@ -35,7 +35,7 @@ export default {
       <h2 style="margin-top:0;font-size:19px">Русский</h2>
       <ul>
         <li><a href="/ru/">Главная</a></li>
-        <li><a href="/ru/about/">Что такое Поной?</a></li>
+        <li><a href="/ru/about/">Что такое Нейливо?</a></li>
         <li><a href="/ru/download/">Скачать</a></li>
         <li><a href="/ru/features/">Возможности</a></li>
         <li><a href="/ru/security/">Безопасность</a></li>

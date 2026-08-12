@@ -3,9 +3,9 @@ import { sizeMB, fmtDate } from '../release.mjs'
 
 const t = {
   en: {
-    title: 'Download Ponoi for Windows, Android and Web',
-    desc: 'Download Ponoi directly: the Windows installer, the Android APK, or open the web app in your browser. Free, no account needed to download.',
-    h1: 'Download Ponoi',
+    title: 'Download NeyLivo for Windows, Android and Web',
+    desc: 'Download NeyLivo directly: the Windows installer, the Android APK, or open the web app in your browser. Free, no account needed to download.',
+    h1: 'Download NeyLivo',
     lede: 'Files come straight from this page. Pick a platform and the download starts — no account, no store, no detour.',
     rec: 'Recommended for your device',
 
@@ -17,12 +17,12 @@ const t = {
 
     and: 'Android',
     andBtn: 'Download APK',
-    andReq: 'Android 7.0 or newer. Installed manually from the APK file — Ponoi is not on Google Play.',
+    andReq: 'Android 7.0 or newer. Installed manually from the APK file — NeyLivo is not on Google Play.',
     andNote: '<b>Android will ask for permission to install apps from this source.</b> That prompt is normal for any app installed outside the store: allow it for the browser or file manager you opened the file with. You do not need to disable Play Protect or any other system protection.',
     andUpd: 'The app checks for new versions itself and offers to install them.',
 
     web: 'Web',
-    webBtn: 'Open Ponoi',
+    webBtn: 'Open NeyLivo',
     webReq: 'Any modern browser: Chrome, Edge, Firefox, Safari. Nothing to install.',
     webNote: 'On a phone you can add the web version to the home screen and it will behave like an installed app.',
 
@@ -32,9 +32,9 @@ const t = {
     verifyNote: 'The Windows installer is not code-signed and the APK is signed with the project’s own key, not a store key. That means the file’s origin can be checked by where it came from, not by a certificate authority.',
 
     sysH: 'Which one should I take?',
-    sysWin: 'Use the Windows app if Ponoi is something you keep open: it lives in the tray, keeps notifications working when the window is closed, records clips and can show a call overlay on top of games.',
+    sysWin: 'Use the Windows app if NeyLivo is something you keep open: it lives in the tray, keeps notifications working when the window is closed, records clips and can show a call overlay on top of games.',
     sysAnd: 'Use the Android app for the phone. Same account, same servers and conversations.',
-    sysWeb: 'Use the web version to try Ponoi in thirty seconds, or on a machine where you cannot install software.',
+    sysWeb: 'Use the web version to try NeyLivo in thirty seconds, or on a machine where you cannot install software.',
 
     ver: 'Version', size: 'Size', req: 'Requirements', rel: 'Released', upd: 'Updates',
     other: 'Other platforms',
@@ -43,9 +43,9 @@ const t = {
   },
 
   ru: {
-    title: 'Скачать Поной для Windows, Android и веба',
-    desc: 'Скачать Ponoi (Поной) напрямую: установщик для Windows, APK для Android или открыть веб-версию в браузере. Бесплатно, учётная запись для скачивания не нужна.',
-    h1: 'Скачать Ponoi',
+    title: 'Скачать Нейливо для Windows, Android и веба',
+    desc: 'Скачать NeyLivo (Нейливо) напрямую: установщик для Windows, APK для Android или открыть веб-версию в браузере. Бесплатно, учётная запись для скачивания не нужна.',
+    h1: 'Скачать NeyLivo',
     lede: 'Файлы отдаются прямо с этой страницы. Выбираешь платформу — начинается загрузка. Без учётной записи, без магазина, без обходных путей.',
     rec: 'Похоже, это ваша платформа',
 
@@ -62,7 +62,7 @@ const t = {
     andUpd: 'Приложение само проверяет новые версии и предлагает их поставить.',
 
     web: 'Веб',
-    webBtn: 'Открыть Ponoi',
+    webBtn: 'Открыть NeyLivo',
     webReq: 'Любой современный браузер: Chrome, Edge, Firefox, Safari. Ставить ничего не надо.',
     webNote: 'На телефоне веб-версию можно добавить на главный экран — дальше она ведёт себя как установленное приложение.',
 
@@ -72,9 +72,9 @@ const t = {
     verifyNote: 'Установщик Windows не подписан сертификатом, а APK подписан собственным ключом проекта, а не ключом магазина. Значит, происхождение файла подтверждается тем, откуда он взят, а не удостоверяющим центром.',
 
     sysH: 'Что выбрать',
-    sysWin: 'Приложение для Windows — если Ponoi всегда открыт: оно живёт в трее, продолжает уведомлять при закрытом окне, записывает клипы и умеет показывать накладку звонка поверх игры.',
+    sysWin: 'Приложение для Windows — если NeyLivo всегда открыт: оно живёт в трее, продолжает уведомлять при закрытом окне, записывает клипы и умеет показывать накладку звонка поверх игры.',
     sysAnd: 'Приложение для Android — для телефона. Та же учётная запись, те же серверы и переписка.',
-    sysWeb: 'Веб-версия — чтобы посмотреть Ponoi за полминуты или на компьютере, куда нельзя ничего ставить.',
+    sysWeb: 'Веб-версия — чтобы посмотреть NeyLivo за полминуты или на компьютере, куда нельзя ничего ставить.',
 
     ver: 'Версия', size: 'Размер', req: 'Требования', rel: 'Выпущено', upd: 'Обновления',
     other: 'Другие платформы',
@@ -91,13 +91,13 @@ export default {
   jsonld: (ctx, lang) => JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Ponoi',
-    alternateName: 'Поной',
+    name: 'NeyLivo',
+    alternateName: 'Нейливо',
     applicationCategory: 'CommunicationApplication',
     operatingSystem: 'Windows, Android, Web',
     softwareVersion: ctx.release.version,
-    url: 'https://ponoiai.github.io/download/',
-    downloadUrl: ctx.release.windows?.url ?? 'https://ponoiai.github.io/download/',
+    url: 'https://neylivo.github.io/download/',
+    downloadUrl: ctx.release.windows?.url ?? 'https://neylivo.github.io/download/',
     fileSize: ctx.release.windows ? String(ctx.release.windows.bytes) : undefined,
     datePublished: ctx.release.published ?? undefined,
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

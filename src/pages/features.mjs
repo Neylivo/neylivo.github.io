@@ -10,14 +10,14 @@ const badge = (kind, lang) =>
 
 const t = {
   en: {
-    title: 'Ponoi Features — Messaging, Communities, Calls, Music, Plugins',
-    desc: 'Everything Ponoi does today: direct messages, servers and channels, voice and video calls, screen sharing, Trackoteka music, themes and JavaScript plugins.',
-    h1: 'What Ponoi can do',
+    title: 'NeyLivo Features — Messaging, Communities, Calls, Music, Plugins',
+    desc: 'Everything NeyLivo does today: direct messages, servers and channels, voice and video calls, screen sharing, Trackoteka music, themes and JavaScript plugins.',
+    h1: 'What NeyLivo can do',
     lede: 'This page lists what exists in the app right now. Nothing here is planned, promised or coming soon — where something is only partly proven, it says so.',
     toc: 'On this page',
 
     msgH: 'Messaging',
-    msgP: 'The basics, done properly. Ponoi is a messenger first.',
+    msgP: 'The basics, done properly. NeyLivo is a messenger first.',
     msgList: [
       'Direct messages with one person, and group conversations with several',
       'Replies with a quoted preview, and threads for longer side-conversations',
@@ -35,7 +35,7 @@ const t = {
     e2eeNote: '<b>Direct messages between two people can be end-to-end encrypted.</b> It is a setting, off by default, and it does not apply to group conversations or server channels. Details on the <a href="/security/">security page</a>.',
 
     comH: 'Communities',
-    comP: 'A server is a place with channels, members and rules. Ponoi covers the parts that make a community actually workable, not just a group chat with a name.',
+    comP: 'A server is a place with channels, members and rules. NeyLivo covers the parts that make a community actually workable, not just a group chat with a name.',
     comList: [
       'Text, voice and forum channels, arranged in categories',
       'Roles with granular permissions, per-channel overrides, and read-only channels',
@@ -61,11 +61,11 @@ const t = {
     callNote: 'Calls can be end-to-end encrypted between two people, as a setting. That path has been tested in code but never verified in a real call between two devices, so it is marked experimental rather than presented as proven. If encryption cannot be set up, the call continues unencrypted and tells you so on screen.',
 
     musH: 'Music — Trackoteka',
-    musP: 'Ponoi has a built-in music system called Trackoteka. It is not a link to a streaming service bolted on the side: the library, the player and listening together are part of the app.',
+    musP: 'NeyLivo has a built-in music system called Trackoteka. It is not a link to a streaming service bolted on the side: the library, the player and listening together are part of the app.',
     musMore: 'Read more about Trackoteka',
 
     custH: 'Customization',
-    custP: 'Ponoi is meant to be rearranged. Most of the visual surface is yours.',
+    custP: 'NeyLivo is meant to be rearranged. Most of the visual surface is yours.',
     custList: [
       'Light and dark themes, plus preset colour schemes and your own accent colour',
       'Your own fonts for the interface and for message text, including uploaded font files',
@@ -76,7 +76,7 @@ const t = {
     ],
 
     plugH: 'Plugins',
-    plugP: 'A plugin is one <code>.ponoi</code> file. Anyone can write one, and send it to a friend in a chat — it arrives as a card with the author, the version and the list of permissions it asks for.',
+    plugP: 'A plugin is one <code>.neylivo</code> file. Anyone can write one, and send it to a friend in a chat — it arrives as a card with the author, the version and the list of permissions it asks for.',
     plugMore: 'Read more about plugins',
 
     privH: 'Privacy and account safety',
@@ -96,18 +96,18 @@ const t = {
     platWin: '<b>Windows.</b> Installed app with a tray icon, notifications while the window is closed, self-updating, clip recording, a call overlay over games, and game detection for activity status.',
     platAnd: '<b>Android.</b> Installed from an APK file. Background music playback with a system media card, push notifications, and mobile-first navigation with swipes and sheets.',
     platWeb: '<b>Web.</b> Runs in a browser with no installation; can be added to a phone’s home screen and then behaves like an app.',
-    offline: 'When the backend is unreachable for a long time, the app offers a minimal emergency chat so people can still reach each other. It is a separate small service and not a copy of Ponoi — it has no servers, channels or friends.',
+    offline: 'When the backend is unreachable for a long time, the app offers a minimal emergency chat so people can still reach each other. It is a separate small service and not a copy of NeyLivo — it has no servers, channels or friends.',
   },
 
   ru: {
-    title: 'Возможности Ponoi — сообщения, сообщества, звонки, музыка, плагины',
-    desc: 'Всё, что Ponoi (Поной) умеет сегодня: личные сообщения, серверы и каналы, голосовые и видеозвонки, демонстрация экрана, Трекотека, темы и плагины на JavaScript.',
-    h1: 'Что умеет Ponoi',
+    title: 'Возможности NeyLivo — сообщения, сообщества, звонки, музыка, плагины',
+    desc: 'Всё, что NeyLivo (Нейливо) умеет сегодня: личные сообщения, серверы и каналы, голосовые и видеозвонки, демонстрация экрана, Трекотека, темы и плагины на JavaScript.',
+    h1: 'Что умеет NeyLivo',
     lede: 'На этой странице перечислено то, что есть в приложении сейчас. Ничего запланированного и «скоро» здесь нет, а где что-то проверено не до конца — так и написано.',
     toc: 'На этой странице',
 
     msgH: 'Переписка',
-    msgP: 'Основа, сделанная как следует. Ponoi прежде всего мессенджер.',
+    msgP: 'Основа, сделанная как следует. NeyLivo прежде всего мессенджер.',
     msgList: [
       'Личные сообщения с одним человеком и групповые беседы с несколькими',
       'Ответы с цитатой и обсуждения для разговоров в стороне',
@@ -125,7 +125,7 @@ const t = {
     e2eeNote: '<b>Личную переписку двух людей можно защитить сквозным шифрованием.</b> Это настройка, по умолчанию выключенная, и на групповые беседы и каналы серверов она не распространяется. Подробности — на <a href="/ru/security/">странице безопасности</a>.',
 
     comH: 'Сообщества',
-    comP: 'Сервер — это место с каналами, участниками и правилами. В Ponoi есть то, без чего сообщество не живёт, а не просто групповой чат с названием.',
+    comP: 'Сервер — это место с каналами, участниками и правилами. В NeyLivo есть то, без чего сообщество не живёт, а не просто групповой чат с названием.',
     comList: [
       'Текстовые, голосовые и форумные каналы, разложенные по категориям',
       'Роли с точными правами, отдельные права на канал и каналы только для чтения',
@@ -151,11 +151,11 @@ const t = {
     callNote: 'Звонок двух людей можно зашифровать сквозным шифрованием — это отдельная настройка. Этот путь проверен в коде, но ни разу не проверен живым звонком между двумя устройствами, поэтому он помечен экспериментальным, а не выдаётся за доказанный. Если шифрование не удалось установить, звонок идёт незашифрованным и говорит об этом на экране.',
 
     musH: 'Музыка — Трекотека',
-    musP: 'В Ponoi встроена музыкальная система — Трекотека. Это не ссылка на стриминг сбоку: библиотека, проигрыватель и совместное прослушивание — часть приложения.',
+    musP: 'В NeyLivo встроена музыкальная система — Трекотека. Это не ссылка на стриминг сбоку: библиотека, проигрыватель и совместное прослушивание — часть приложения.',
     musMore: 'Подробнее о Трекотеке',
 
     custH: 'Персонализация',
-    custP: 'Ponoi рассчитан на то, что его переделают под себя. Почти всё, что видно на экране, — ваше.',
+    custP: 'NeyLivo рассчитан на то, что его переделают под себя. Почти всё, что видно на экране, — ваше.',
     custList: [
       'Светлая и тёмная темы, наборы цветовых схем и свой цвет акцента',
       'Свои шрифты для интерфейса и для текста сообщений, включая загруженные файлы шрифтов',
@@ -166,7 +166,7 @@ const t = {
     ],
 
     plugH: 'Плагины',
-    plugP: 'Плагин — это один файл <code>.ponoi</code>. Написать его может кто угодно и отправить другу прямо в чат — он придёт карточкой с автором, версией и списком запрошенных разрешений.',
+    plugP: 'Плагин — это один файл <code>.neylivo</code>. Написать его может кто угодно и отправить другу прямо в чат — он придёт карточкой с автором, версией и списком запрошенных разрешений.',
     plugMore: 'Подробнее о плагинах',
 
     privH: 'Приватность и защита учётной записи',
@@ -186,7 +186,7 @@ const t = {
     platWin: '<b>Windows.</b> Установленное приложение со значком в трее, уведомлениями при закрытом окне, самообновлением, записью клипов, накладкой звонка поверх игр и определением запущенной игры для статуса.',
     platAnd: '<b>Android.</b> Ставится из файла APK. Музыка играет в фоне с системной карточкой, приходят пуш-уведомления, навигация сделана под телефон — свайпы и шторки.',
     platWeb: '<b>Веб.</b> Работает в браузере без установки; на телефоне добавляется на главный экран и дальше ведёт себя как приложение.',
-    offline: 'Если основной сервер долго недоступен, приложение предлагает аварийный чат, чтобы люди всё же могли друг друга дозваться. Это отдельная маленькая служба, а не копия Ponoi: в ней нет ни серверов, ни каналов, ни друзей.',
+    offline: 'Если основной сервер долго недоступен, приложение предлагает аварийный чат, чтобы люди всё же могли друг друга дозваться. Это отдельная маленькая служба, а не копия NeyLivo: в ней нет ни серверов, ни каналов, ни друзей.',
   },
 }
 
@@ -286,7 +286,7 @@ export default {
     <li>${s.platWeb}</li>
   </ul>
   <p>${s.offline}</p>
-  <p><a href="${L('download')}">${lang === 'en' ? 'Download Ponoi' : 'Скачать Ponoi'} →</a></p>
+  <p><a href="${L('download')}">${lang === 'en' ? 'Download NeyLivo' : 'Скачать NeyLivo'} →</a></p>
 </section>
 `
   },

@@ -14,7 +14,7 @@ const { app, BrowserWindow } = require('electron')
 const path = require('path')
 const fs = require('fs')
 
-const OUT = path.join(__dirname, '..', 'assets', 'ponoi-og.png')
+const OUT = path.join(__dirname, '..', 'assets', 'neylivo-og.png')
 const W = 1200
 const H = 630
 
@@ -64,12 +64,12 @@ const HTML = `<!doctype html><meta charset="utf-8">
 <div class="row">
   <div class="mark">${MARK}</div>
   <div>
-    <h1>PONOI</h1>
+    <h1>NEYLIVO</h1>
     <div class="tag">Private. Extensible. Yours.</div>
     <div class="lede">A privacy-focused extensible messenger for conversations, communities, calls and music.</div>
   </div>
 </div>
-<div class="foot"><span>ponoiai.github.io</span><span>Windows · Android · Web</span></div>
+<div class="foot"><span>neylivo.github.io</span><span>Windows · Android · Web</span></div>
 `
 
 app.disableHardwareAcceleration()

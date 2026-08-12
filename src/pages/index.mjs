@@ -4,25 +4,25 @@ import { sizeMB } from '../release.mjs'
 
 const t = {
   en: {
-    title: 'Ponoi — Private Extensible Messenger',
-    desc: 'Ponoi is a privacy-focused extensible messenger with private conversations, communities, calls, Trackoteka and a JavaScript plugin platform for Windows, Android and the web.',
+    title: 'NeyLivo — Private Extensible Messenger',
+    desc: 'NeyLivo is a privacy-focused extensible messenger with private conversations, communities, calls, Trackoteka and a JavaScript plugin platform for Windows, Android and the web.',
     tagline: 'Private. Extensible. Yours.',
-    lede: 'Ponoi is a privacy-focused extensible messenger for conversations, communities, calls, music and powerful customization.',
-    dl: 'Download Ponoi',
+    lede: 'NeyLivo is a privacy-focused extensible messenger for conversations, communities, calls, music and powerful customization.',
+    dl: 'Download NeyLivo',
     dlWin: 'Download for Windows',
     dlAnd: 'Download for Android',
     open: 'Open Web App',
     plat: 'Windows · Android · Web',
     other: 'Other platforms',
-    shotCap: 'A server with channels, a conversation and the member list — Ponoi on Windows.',
+    shotCap: 'A server with channels, a conversation and the member list — NeyLivo on Windows.',
     shotLight: 'The same server in the light theme.',
     shotPhone: 'The same server on a phone.',
     shotsH: 'This is what it looks like',
     freeNote: 'Free. No ads, no trackers, no account tiers.',
 
-    whatH: 'What is Ponoi?',
-    whatP: '<b>Ponoi (Поной) is a messenger and communication platform.</b> You write to people directly, build servers with channels for your community, call each other with video and screen sharing, listen to music together, and change almost everything about how the app looks and works — including writing your own plugins for it.',
-    whatP2: 'It runs on Windows, on Android and in a browser, with the same account everywhere. Two names, one product: <b>Ponoi</b> in Latin script and <b>Поной</b> in Cyrillic.',
+    whatH: 'What is NeyLivo?',
+    whatP: '<b>NeyLivo (Нейливо) is a messenger and communication platform.</b> You write to people directly, build servers with channels for your community, call each other with video and screen sharing, listen to music together, and change almost everything about how the app looks and works — including writing your own plugins for it.',
+    whatP2: 'It runs on Windows, on Android and in a browser, with the same account everywhere. Two names, one product: <b>NeyLivo</b> in Latin script and <b>Нейливо</b> in Cyrillic.',
     whatMore: 'Read the full description',
 
     fH: 'What it does',
@@ -35,13 +35,13 @@ const t = {
     fCust: 'Customization',
     fCustP: 'Light and dark themes with presets, your own fonts, chat backgrounds, profile colours and banners. It is meant to be rearranged.',
     fPlug: 'Plugins',
-    fPlugP: 'A plugin is one <code>.ponoi</code> file. It runs in an isolated Web Worker and can only do what its declared permissions allow.',
+    fPlugP: 'A plugin is one <code>.neylivo</code> file. It runs in an isolated Web Worker and can only do what its declared permissions allow.',
     fMus: 'Trackoteka',
-    fMusP: 'A shared music library inside Ponoi: upload tracks or add links, build playlists, follow synced lyrics and listen together in one room.',
+    fMusP: 'A shared music library inside NeyLivo: upload tracks or add links, build playlists, follow synced lyrics and listen together in one room.',
     fAll: 'See all features',
 
     privH: 'Privacy you can check, not just read about',
-    privP: 'Claims about security are easy to write and hard to verify. Ponoi does it the other way round: the source code is public, and every claim on this site points at the part of it that backs the claim up.',
+    privP: 'Claims about security are easy to write and hard to verify. NeyLivo does it the other way round: the source code is public, and every claim on this site points at the part of it that backs the claim up.',
     p1H: 'End-to-end encrypted direct messages',
     p1P: 'One-to-one conversations can be encrypted device to device with ECDH P-256, HKDF-SHA256 and AES-256-GCM. Keys never leave your device in the clear, message length is hidden by padding, and fingerprints let you verify the other person.',
     p1Note: 'This is a setting, and it is off until you turn it on. Group chats and server channels are not end-to-end encrypted.',
@@ -52,39 +52,39 @@ const t = {
     privCta: 'Read the security page',
     privCta2: 'Read the privacy page',
 
-    hnH: 'What Ponoi is not',
+    hnH: 'What NeyLivo is not',
     hnP: 'A product page is where projects tend to exaggerate. This is the list we keep ourselves honest with:',
     hn1: 'Not fully end-to-end encrypted. Encryption covers one-to-one direct messages and is a setting you switch on. Server channels and group chats are protected by access rules on the server, not by end-to-end encryption.',
     hn2: 'Not anonymous. Registration needs an email address, messages have an author, and servers keep a moderation log.',
     hn3: 'Not audited. No external security audit has been done. Nobody has certified anything.',
-    hn4: 'Not finished. Ponoi is under active development, and some parts are marked experimental exactly because they have not been proven in the field yet.',
+    hn4: 'Not finished. NeyLivo is under active development, and some parts are marked experimental exactly because they have not been proven in the field yet.',
     hnCta: 'What we know is imperfect',
 
-    dlH: 'Get Ponoi',
+    dlH: 'Get NeyLivo',
     dlP: 'Downloads come straight from this site. Pick your platform and the file starts downloading — you do not need a GitHub account or any account at all to get the app.',
     ver: 'Version',
   },
 
   ru: {
-    title: 'Поной — приватный расширяемый мессенджер',
-    desc: 'Ponoi (Поной) — приватный расширяемый мессенджер: личные сообщения, сообщества, звонки, Трекотека, персонализация и плагины. Windows, Android и веб.',
+    title: 'Нейливо — приватный расширяемый мессенджер',
+    desc: 'NeyLivo (Нейливо) — приватный расширяемый мессенджер: личные сообщения, сообщества, звонки, Трекотека, персонализация и плагины. Windows, Android и веб.',
     tagline: 'Приватный. Расширяемый. Твой.',
-    lede: 'Ponoi — приватный расширяемый мессенджер для общения, сообществ, звонков, музыки и глубокой персонализации.',
-    dl: 'Скачать Ponoi',
+    lede: 'NeyLivo — приватный расширяемый мессенджер для общения, сообществ, звонков, музыки и глубокой персонализации.',
+    dl: 'Скачать NeyLivo',
     dlWin: 'Скачать для Windows',
     dlAnd: 'Скачать для Android',
     open: 'Открыть в браузере',
     plat: 'Windows · Android · Веб',
     other: 'Другие платформы',
-    shotCap: 'Сервер с каналами, переписка и список участников — Ponoi на Windows.',
+    shotCap: 'Сервер с каналами, переписка и список участников — NeyLivo на Windows.',
     shotLight: 'Тот же сервер на светлой теме.',
     shotPhone: 'Тот же сервер на телефоне.',
     shotsH: 'Как это выглядит',
     freeNote: 'Бесплатно. Без рекламы, без слежки, без платных уровней.',
 
-    whatH: 'Что такое Поной?',
-    whatP: '<b>Ponoi (Поной) — мессенджер и платформа для общения.</b> В нём пишут людям напрямую, собирают серверы с каналами под своё сообщество, созваниваются с видео и демонстрацией экрана, слушают музыку вместе и меняют почти всё в том, как приложение выглядит и работает, — вплоть до собственных плагинов к нему.',
-    whatP2: 'Он работает на Windows, на Android и в браузере, с одной и той же учётной записью везде. Два написания, один продукт: <b>Ponoi</b> латиницей и <b>Поной</b> кириллицей.',
+    whatH: 'Что такое Нейливо?',
+    whatP: '<b>NeyLivo (Нейливо) — мессенджер и платформа для общения.</b> В нём пишут людям напрямую, собирают серверы с каналами под своё сообщество, созваниваются с видео и демонстрацией экрана, слушают музыку вместе и меняют почти всё в том, как приложение выглядит и работает, — вплоть до собственных плагинов к нему.',
+    whatP2: 'Он работает на Windows, на Android и в браузере, с одной и той же учётной записью везде. Два написания, один продукт: <b>NeyLivo</b> латиницей и <b>Нейливо</b> кириллицей.',
     whatMore: 'Подробное описание',
 
     fH: 'Что он умеет',
@@ -97,13 +97,13 @@ const t = {
     fCust: 'Персонализация',
     fCustP: 'Светлая и тёмная темы с наборами, свои шрифты, фоны чата, цвета и обложки профиля. Приложение рассчитано на то, что его переделают под себя.',
     fPlug: 'Плагины',
-    fPlugP: 'Плагин — это один файл <code>.ponoi</code>. Он работает в отдельном Web Worker и может ровно то, на что человек дал разрешение.',
+    fPlugP: 'Плагин — это один файл <code>.neylivo</code>. Он работает в отдельном Web Worker и может ровно то, на что человек дал разрешение.',
     fMus: 'Трекотека',
-    fMusP: 'Общая музыкальная библиотека внутри Ponoi: загружай треки или добавляй ссылки, собирай плейлисты, следи за текстом по строчкам и слушай вместе.',
+    fMusP: 'Общая музыкальная библиотека внутри NeyLivo: загружай треки или добавляй ссылки, собирай плейлисты, следи за текстом по строчкам и слушай вместе.',
     fAll: 'Все возможности',
 
     privH: 'Приватность, которую можно проверить',
-    privP: 'Написать про безопасность легко, проверить написанное трудно. В Ponoi сделано наоборот: исходный код открыт, и каждое утверждение на этом сайте указывает на ту часть кода, которая за него отвечает.',
+    privP: 'Написать про безопасность легко, проверить написанное трудно. В NeyLivo сделано наоборот: исходный код открыт, и каждое утверждение на этом сайте указывает на ту часть кода, которая за него отвечает.',
     p1H: 'Сквозное шифрование личной переписки',
     p1P: 'Переписку один на один можно шифровать от устройства до устройства: ECDH P-256, HKDF-SHA256, AES-256-GCM. Приватный ключ не покидает устройство в открытом виде, длина сообщения скрыта дополнением, а отпечаток ключа можно сверить голосом.',
     p1Note: 'Это переключатель, и по умолчанию он выключен. Групповые чаты и каналы серверов сквозным шифрованием не защищены.',
@@ -114,15 +114,15 @@ const t = {
     privCta: 'Страница безопасности',
     privCta2: 'Страница приватности',
 
-    hnH: 'Чем Ponoi не является',
+    hnH: 'Чем NeyLivo не является',
     hnP: 'Главная страница — то место, где проекты обычно преувеличивают. Вот список, которым мы удерживаем себя от этого:',
     hn1: 'Это не полностью сквозное шифрование. Оно есть в личной переписке один на один и включается вручную. Каналы серверов и групповые чаты защищены правилами доступа на сервере, а не сквозным шифрованием.',
     hn2: 'Это не анонимность. Для регистрации нужна почта, у сообщений есть автор, а на серверах ведётся журнал действий модерации.',
     hn3: 'Внешнего аудита не было. Никто ничего не сертифицировал.',
-    hn4: 'Это не законченный продукт. Ponoi активно разрабатывается, и часть возможностей помечена как экспериментальная именно потому, что ещё не проверена в жизни.',
+    hn4: 'Это не законченный продукт. NeyLivo активно разрабатывается, и часть возможностей помечена как экспериментальная именно потому, что ещё не проверена в жизни.',
     hnCta: 'Что мы знаем о своих слабых местах',
 
-    dlH: 'Забрать Ponoi',
+    dlH: 'Забрать NeyLivo',
     dlP: 'Скачивание идёт прямо с этого сайта. Выбираешь платформу — начинается загрузка файла. Ни учётной записи GitHub, ни вообще какой-либо учётной записи для этого не нужно.',
     ver: 'Версия',
   },
@@ -151,32 +151,32 @@ export default {
     '@graph': [
       {
         '@type': 'WebSite',
-        '@id': 'https://ponoiai.github.io/#website',
-        name: 'Ponoi',
-        alternateName: 'Поной',
-        url: 'https://ponoiai.github.io/',
+        '@id': 'https://neylivo.github.io/#website',
+        name: 'NeyLivo',
+        alternateName: 'Нейливо',
+        url: 'https://neylivo.github.io/',
         inLanguage: ['en', 'ru'],
       },
       {
         '@type': 'SoftwareApplication',
-        '@id': 'https://ponoiai.github.io/#app',
-        name: 'Ponoi',
-        alternateName: ['Поной', 'Ponoi Messenger', 'мессенджер Поной'],
+        '@id': 'https://neylivo.github.io/#app',
+        name: 'NeyLivo',
+        alternateName: ['Нейливо', 'NeyLivo Messenger', 'мессенджер Нейливо'],
         applicationCategory: 'CommunicationApplication',
         applicationSubCategory: 'Messaging',
         operatingSystem: 'Windows, Android, Web',
         softwareVersion: ctx.release.version,
-        url: 'https://ponoiai.github.io/',
-        downloadUrl: 'https://ponoiai.github.io/download/',
-        installUrl: 'https://ponoiai.github.io/download/',
-        softwareHelp: 'https://ponoiai.github.io/docs/',
-        releaseNotes: 'https://ponoiai.github.io/changelog/',
+        url: 'https://neylivo.github.io/',
+        downloadUrl: 'https://neylivo.github.io/download/',
+        installUrl: 'https://neylivo.github.io/download/',
+        softwareHelp: 'https://neylivo.github.io/docs/',
+        releaseNotes: 'https://neylivo.github.io/changelog/',
         inLanguage: ['en', 'ru'],
-        author: { '@type': 'Person', name: 'ponoiai', url: 'https://github.com/ponoiai' },
+        author: { '@type': 'Person', name: 'NeyLivo', url: 'https://github.com/Neylivo' },
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         description: lang === 'en'
-          ? 'Ponoi is a privacy-focused extensible messaging platform for conversations, communities, calls, music and plugins.'
-          : 'Ponoi (Поной) — приватный расширяемый мессенджер для общения, сообществ, звонков, музыки и плагинов.',
+          ? 'NeyLivo is a privacy-focused extensible messaging platform for conversations, communities, calls, music and plugins.'
+          : 'NeyLivo (Нейливо) — приватный расширяемый мессенджер для общения, сообществ, звонков, музыки и плагинов.',
         featureList: lang === 'en'
           ? ['Direct messages', 'Servers and channels', 'Voice and video calls', 'Screen sharing',
              'End-to-end encrypted direct messages (optional)', 'JavaScript plugins', 'Trackoteka music library', 'Themes and customization']
@@ -200,7 +200,7 @@ export default {
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1 class="wordmark">PONOI</h1>
+      <h1 class="wordmark">NEYLIVO</h1>
       <p class="tagline">${s.tagline}</p>
       <p class="lede">${s.lede}</p>
       <div class="cta-row">
@@ -227,7 +227,7 @@ export default {
 <section class="band band-alt">
   <div class="wrap">
     <div class="prose">
-      <p class="eyebrow">Ponoi · Поной</p>
+      <p class="eyebrow">NeyLivo · Нейливо</p>
       <h2 class="mt0">${s.whatH}</h2>
       <p class="lede">${s.whatP}</p>
       <p>${s.whatP2}</p>

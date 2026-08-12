@@ -2,10 +2,10 @@ import { urlFor, REPO_URL, DATE_LABEL } from '../site.mjs'
 
 const t = {
   en: {
-    title: 'Ponoi Transparency — What We Know Is Imperfect',
-    desc: 'An honest list of what Ponoi does not do well yet: unencrypted attachments, encryption off by default, unverified features and the absence of an external audit.',
+    title: 'NeyLivo Transparency — What We Know Is Imperfect',
+    desc: 'An honest list of what NeyLivo does not do well yet: unencrypted attachments, encryption off by default, unverified features and the absence of an external audit.',
     h1: 'Transparency',
-    lede: 'Product pages are written to impress. This one is written to be checkable. Everything below is a real weakness of Ponoi, listed by the project itself.',
+    lede: 'Product pages are written to impress. This one is written to be checkable. Everything below is a real weakness of NeyLivo, listed by the project itself.',
     updated: 'Last updated',
 
     whyH: 'Why this page exists',
@@ -65,10 +65,10 @@ const t = {
   },
 
   ru: {
-    title: 'Прозрачность Ponoi — что у нас пока плохо',
-    desc: 'Честный список того, что в Ponoi (Поное) пока сделано плохо: незашифрованные вложения, шифрование выключено по умолчанию, непроверенные возможности и отсутствие внешнего аудита.',
+    title: 'Прозрачность NeyLivo — что у нас пока плохо',
+    desc: 'Честный список того, что в NeyLivo (Нейливо) пока сделано плохо: незашифрованные вложения, шифрование выключено по умолчанию, непроверенные возможности и отсутствие внешнего аудита.',
     h1: 'Прозрачность',
-    lede: 'Страницы о продукте пишут, чтобы впечатлить. Эта написана, чтобы её можно было проверить. Всё, что ниже, — настоящие слабые места Ponoi, перечисленные самим проектом.',
+    lede: 'Страницы о продукте пишут, чтобы впечатлить. Эта написана, чтобы её можно было проверить. Всё, что ниже, — настоящие слабые места NeyLivo, перечисленные самим проектом.',
     updated: 'Обновлено',
 
     whyH: 'Зачем эта страница',
@@ -142,7 +142,7 @@ export default {
     <p class="eyebrow">${lang === 'en' ? 'Transparency' : 'Прозрачность'}</p>
     <h1>${s.h1}</h1>
     <p class="lede">${s.lede}</p>
-    <p class="stamp">${s.updated}: ${DATE_LABEL[lang]} · Ponoi ${ctx.release.version}</p>
+    <p class="stamp">${s.updated}: ${DATE_LABEL[lang]} · NeyLivo ${ctx.release.version}</p>
   </div>
 </section>
 

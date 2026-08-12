@@ -2,13 +2,13 @@ import { urlFor } from '../site.mjs'
 
 const t = {
   en: {
-    title: 'Trackoteka — Music in Ponoi',
-    desc: 'Trackoteka (Трекотека) is Ponoi’s integrated music system: a shared library, playlists, a personal queue, synced lyrics and listening together in one room.',
+    title: 'Trackoteka — Music in NeyLivo',
+    desc: 'Trackoteka (Трекотека) is NeyLivo’s integrated music system: a shared library, playlists, a personal queue, synced lyrics and listening together in one room.',
     h1: 'Trackoteka',
-    lede: '<b>Trackoteka is Ponoi’s integrated music experience.</b> Not a link to a streaming service bolted on the side — the library, the player and listening together are part of the messenger.',
+    lede: '<b>Trackoteka is NeyLivo’s integrated music experience.</b> Not a link to a streaming service bolted on the side — the library, the player and listening together are part of the messenger.',
 
     defH: 'What Trackoteka is',
-    defP: 'Trackoteka (Russian: <b>Трекотека</b>) is the shared music library that sits at the centre of Ponoi Music, the app’s built-in player. Tracks put into it are there for everyone who uses that library: you add a song, and the people you listen with have it too.',
+    defP: 'Trackoteka (Russian: <b>Трекотека</b>) is the shared music library that sits at the centre of NeyLivo Music, the app’s built-in player. Tracks put into it are there for everyone who uses that library: you add a song, and the people you listen with have it too.',
     defP2: 'It exists because listening is something people do together. Sharing a link and pressing play at the same time is not listening together; being in the same room with the same queue is.',
 
     libH: 'The library',
@@ -19,7 +19,7 @@ const t = {
       '<b>Search</b> across titles, artists and the names tracks were saved under.',
       '<b>Play counts.</b> The total for a track is shown to everyone; your own listening history is private and is not shown to anyone else.',
     ],
-    linkNote: 'Links to Spotify, Apple Music, Yandex Music and Bandcamp are recognised and shown properly with title and cover, but they cannot be played in full by any third-party app — those services only allow playback in their own players. Ponoi says so instead of pretending otherwise.',
+    linkNote: 'Links to Spotify, Apple Music, Yandex Music and Bandcamp are recognised and shown properly with title and cover, but they cannot be played in full by any third-party app — those services only allow playback in their own players. NeyLivo says so instead of pretending otherwise.',
 
     playH: 'The player',
     playL: [
@@ -37,24 +37,24 @@ const t = {
     togP2: 'While a lobby is running, listeners cannot skip, pause or remove tracks — those decisions affect everybody in the room. The app puts a line on screen saying exactly that, so the disabled buttons read as a rule rather than a bug.',
 
     aiH: 'Recognising lyrics',
-    aiP: 'When a track has no lyrics anywhere, Ponoi can listen to it and write them down itself, using a speech recognition model that runs on your device. The model is downloaded only when you press the button, and the audio never leaves your computer.',
+    aiP: 'When a track has no lyrics anywhere, NeyLivo can listen to it and write them down itself, using a speech recognition model that runs on your device. The model is downloaded only when you press the button, and the audio never leaves your computer.',
     aiNote: 'Recognition is a fallback, not magic: it produces plain lyrics, not karaoke timing, and how well it does depends on the recording.',
 
     nameH: 'The name',
-    nameP: '<b>Trackoteka</b> and <b>Трекотека</b> are the same thing — the word is used inside the app in Russian and transliterated here. It belongs to Ponoi: there is no separate app, no separate account and no separate subscription.',
+    nameP: '<b>Trackoteka</b> and <b>Трекотека</b> are the same thing — the word is used inside the app in Russian and transliterated here. It belongs to NeyLivo: there is no separate app, no separate account and no separate subscription.',
 
     ctaH: 'Try it',
-    ctaP: 'Trackoteka is part of the app — there is nothing extra to install. Open Ponoi and press the music button.',
+    ctaP: 'Trackoteka is part of the app — there is nothing extra to install. Open NeyLivo and press the music button.',
   },
 
   ru: {
-    title: 'Трекотека — музыка в Ponoi',
-    desc: 'Трекотека (Trackoteka) — встроенная музыкальная система Ponoi: общая библиотека, плейлисты, личная очередь, синхронный текст песни и совместное прослушивание.',
+    title: 'Трекотека — музыка в NeyLivo',
+    desc: 'Трекотека (Trackoteka) — встроенная музыкальная система NeyLivo: общая библиотека, плейлисты, личная очередь, синхронный текст песни и совместное прослушивание.',
     h1: 'Трекотека',
-    lede: '<b>Трекотека — встроенная музыкальная система Ponoi.</b> Не ссылка на стриминг сбоку: библиотека, проигрыватель и совместное прослушивание — часть мессенджера.',
+    lede: '<b>Трекотека — встроенная музыкальная система NeyLivo.</b> Не ссылка на стриминг сбоку: библиотека, проигрыватель и совместное прослушивание — часть мессенджера.',
 
     defH: 'Что такое Трекотека',
-    defP: 'Трекотека (латиницей <b>Trackoteka</b>) — общая музыкальная библиотека, вокруг которой построена Ponoi Music, встроенный проигрыватель приложения. Положенные в неё треки есть у всех, кто этой библиотекой пользуется: добавил песню — и она есть у тех, с кем вы слушаете.',
+    defP: 'Трекотека (латиницей <b>Trackoteka</b>) — общая музыкальная библиотека, вокруг которой построена NeyLivo Music, встроенный проигрыватель приложения. Положенные в неё треки есть у всех, кто этой библиотекой пользуется: добавил песню — и она есть у тех, с кем вы слушаете.',
     defP2: 'Она существует потому, что музыку слушают вместе. Скинуть ссылку и нажать «играть» одновременно — это не «слушать вместе»; быть в одной комнате с одной очередью — это оно.',
 
     libH: 'Библиотека',
@@ -65,7 +65,7 @@ const t = {
       '<b>Поиск</b> по названию, исполнителю и по тому имени, под которым трек когда-то сохранили.',
       '<b>Счётчик прослушиваний.</b> Общее число по треку видно всем; ваша личная история прослушивания приватна и никому не показывается.',
     ],
-    linkNote: 'Ссылки на Spotify, Apple Music, Яндекс.Музыку и Bandcamp распознаются и показываются как надо — с названием и обложкой, — но сыграть их целиком не может ни одно стороннее приложение: эти сервисы разрешают воспроизведение только в своих проигрывателях. Ponoi говорит это прямо, а не делает вид, что умеет.',
+    linkNote: 'Ссылки на Spotify, Apple Music, Яндекс.Музыку и Bandcamp распознаются и показываются как надо — с названием и обложкой, — но сыграть их целиком не может ни одно стороннее приложение: эти сервисы разрешают воспроизведение только в своих проигрывателях. NeyLivo говорит это прямо, а не делает вид, что умеет.',
 
     playH: 'Проигрыватель',
     playL: [
@@ -83,14 +83,14 @@ const t = {
     togP2: 'Пока идёт лобби, слушатели не переключают, не ставят на паузу и не удаляют треки — это решения, которые касаются всех в комнате. Приложение пишет об этом строкой на экране, чтобы выключенные кнопки читались как правило, а не как поломка.',
 
     aiH: 'Распознавание текста',
-    aiP: 'Когда текста песни нет нигде, Ponoi может послушать её и записать текст сам — моделью распознавания речи, которая работает на вашем устройстве. Модель скачивается только по нажатию кнопки, а звук никуда не уходит.',
+    aiP: 'Когда текста песни нет нигде, NeyLivo может послушать её и записать текст сам — моделью распознавания речи, которая работает на вашем устройстве. Модель скачивается только по нажатию кнопки, а звук никуда не уходит.',
     aiNote: 'Распознавание — это запасной путь, а не волшебство: получается обычный текст, без караоке-меток, и качество зависит от записи.',
 
     nameH: 'О названии',
-    nameP: '<b>Трекотека</b> и <b>Trackoteka</b> — одно и то же; слово используется внутри приложения по-русски, здесь оно записано латиницей. Она принадлежит Ponoi: отдельного приложения, отдельной учётной записи и отдельной подписки у неё нет.',
+    nameP: '<b>Трекотека</b> и <b>Trackoteka</b> — одно и то же; слово используется внутри приложения по-русски, здесь оно записано латиницей. Она принадлежит NeyLivo: отдельного приложения, отдельной учётной записи и отдельной подписки у неё нет.',
 
     ctaH: 'Попробовать',
-    ctaP: 'Трекотека — часть приложения, ставить отдельно нечего. Открой Ponoi и нажми кнопку музыки.',
+    ctaP: 'Трекотека — часть приложения, ставить отдельно нечего. Открой NeyLivo и нажми кнопку музыки.',
   },
 }
 
@@ -150,7 +150,7 @@ export default {
     <h2>${s.ctaH}</h2>
     <p>${s.ctaP}</p>
     <div class="cta-row">
-      <a class="btn btn-solid" href="${urlFor('download', lang)}">${lang === 'en' ? 'Download Ponoi' : 'Скачать Ponoi'}</a>
+      <a class="btn btn-solid" href="${urlFor('download', lang)}">${lang === 'en' ? 'Download NeyLivo' : 'Скачать NeyLivo'}</a>
       <a class="btn btn-quiet" href="${urlFor('features', lang)}">${lang === 'en' ? 'All features' : 'Все возможности'}</a>
     </div>
   </div>

@@ -15,7 +15,7 @@ import { dirname, join } from 'node:path'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE = join(HERE, '..', 'data', 'changelog.json')
-const RAW = 'https://raw.githubusercontent.com/ponoiai/ponoi/main/src/lib/changelog.ts'
+const RAW = 'https://raw.githubusercontent.com/Neylivo/neylivo/main/src/lib/changelog.ts'
 
 /** { version, date, items[] }[] — новые сверху. */
 export async function getChangelog(limit = 40) {

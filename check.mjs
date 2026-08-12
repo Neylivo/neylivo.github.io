@@ -11,7 +11,7 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const DIST = join(dirname(fileURLToPath(import.meta.url)), 'dist')
-const ORIGIN = 'https://ponoiai.github.io'
+const ORIGIN = 'https://neylivo.github.io'
 
 let errors = 0
 let warnings = 0

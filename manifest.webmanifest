@@ -1,7 +1,7 @@
 {
-  "name": "Ponoi",
-  "short_name": "Ponoi",
-  "description": "Ponoi is a privacy-focused extensible messenger for conversations, communities, calls, music and plugins.",
+  "name": "NeyLivo",
+  "short_name": "NeyLivo",
+  "description": "NeyLivo is a privacy-focused extensible messenger for conversations, communities, calls, music and plugins.",
   "start_url": "/",
   "scope": "/",
   "display": "browser",

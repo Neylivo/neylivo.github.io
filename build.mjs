@@ -1,4 +1,4 @@
-// Сборка сайта Ponoi: из модулей страниц получается готовая статика в dist/.
+// Сборка сайта NeyLivo: из модулей страниц получается готовая статика в dist/.
 //
 // Никакого фреймворка здесь нет намеренно. Сайт из пятнадцати страниц, которые
 // обязаны читаться поисковым роботом без единой строчки JavaScript, — ровно та
@@ -96,9 +96,9 @@ async function main() {
 
   // ── manifest ─────────────────────────────────────────────────────────
   await writeFile(join(DIST, 'manifest.webmanifest'), JSON.stringify({
-    name: 'Ponoi',
-    short_name: 'Ponoi',
-    description: 'Ponoi is a privacy-focused extensible messenger for conversations, communities, calls, music and plugins.',
+    name: 'NeyLivo',
+    short_name: 'NeyLivo',
+    description: 'NeyLivo is a privacy-focused extensible messenger for conversations, communities, calls, music and plugins.',
     start_url: '/',
     scope: '/',
     display: 'browser',
@@ -124,12 +124,12 @@ function redirect(to, lang) {
 <html lang="${lang}">
 <head>
 <meta charset="utf-8">
-<title>Ponoi</title>
+<title>NeyLivo</title>
 <link rel="canonical" href="${ORIGIN}${to}">
 <meta name="robots" content="noindex, follow">
 <meta http-equiv="refresh" content="0; url=${to}">
 </head>
-<body><p>Ponoi: <a href="${to}">${ORIGIN}${to}</a></p></body>
+<body><p>NeyLivo: <a href="${to}">${ORIGIN}${to}</a></p></body>
 </html>
 `
 }

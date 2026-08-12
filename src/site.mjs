@@ -1,15 +1,15 @@
 // Общие данные сайта: адреса, навигация, подписи интерфейса.
 //
 // Всё, что повторяется на страницах, живёт здесь в одном экземпляре. Иначе
-// «Ponoi» на одной странице и «Ponoi Messenger» на другой разойдутся сами
+// «NeyLivo» на одной странице и «NeyLivo Messenger» на другой разойдутся сами
 // собой, а поисковику нужна одна сущность, а не четыре похожие.
 
-export const ORIGIN = 'https://ponoiai.github.io'
+export const ORIGIN = 'https://neylivo.github.io'
 
 /** Веб-версия приложения. Это НЕ сайт: приложение живёт по своему адресу. */
-export const APP_URL = 'https://ponoiai.github.io/ponoi/'
-export const REPO_URL = 'https://github.com/ponoiai/ponoi'
-export const RELEASES_URL = 'https://github.com/ponoiai/ponoi/releases'
+export const APP_URL = 'https://neylivo.github.io/neylivo/'
+export const REPO_URL = 'https://github.com/Neylivo/neylivo'
+export const RELEASES_URL = 'https://github.com/Neylivo/neylivo/releases'
 
 export const LANGS = ['en', 'ru']
 
@@ -50,7 +50,7 @@ export const FOOTER = [
   {
     en: 'About', ru: 'О проекте',
     links: [
-      { slug: 'about', en: 'What is Ponoi?', ru: 'Что такое Поной?' },
+      { slug: 'about', en: 'What is NeyLivo?', ru: 'Что такое Нейливо?' },
       { slug: 'docs', en: 'Documentation', ru: 'Документация' },
       { slug: 'press', en: 'Press kit', ru: 'Для прессы' },
       { href: REPO_URL, en: 'Source code', ru: 'Исходный код', external: true },
@@ -63,26 +63,26 @@ export const UI = {
   en: {
     skip: 'Skip to content',
     menu: 'Menu',
-    openApp: 'Open Ponoi',
+    openApp: 'Open NeyLivo',
     download: 'Download',
     onThisPage: 'On this page',
     langLabel: 'Language',
     otherLang: 'Русский',
     footerNote:
-      'Ponoi is an independent project. This site is the official source of information about it.',
+      'NeyLivo is an independent project. This site is the official source of information about it.',
     updated: 'Last updated',
     home: 'Home',
   },
   ru: {
     skip: 'К содержанию',
     menu: 'Меню',
-    openApp: 'Открыть Ponoi',
+    openApp: 'Открыть NeyLivo',
     download: 'Скачать',
     onThisPage: 'На этой странице',
     langLabel: 'Язык',
     otherLang: 'English',
     footerNote:
-      'Ponoi — независимый проект. Этот сайт — официальный источник сведений о нём.',
+      'NeyLivo — независимый проект. Этот сайт — официальный источник сведений о нём.',
     updated: 'Обновлено',
     home: 'Главная',
   },

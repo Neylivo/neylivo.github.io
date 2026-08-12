@@ -2,10 +2,10 @@ import { urlFor, REPO_URL, DATE_LABEL } from '../site.mjs'
 
 const t = {
   en: {
-    title: 'Ponoi Security — Security Architecture and Privacy',
-    desc: 'How Ponoi protects messages, files, calls and accounts: end-to-end encryption for direct messages, plugin isolation, the threat model and the known limitations.',
-    h1: 'Ponoi Security',
-    lede: 'This page describes what actually protects your data in Ponoi, and what does not. Where a protection is optional, off by default, or unproven, that is written here rather than left out.',
+    title: 'NeyLivo Security — Security Architecture and Privacy',
+    desc: 'How NeyLivo protects messages, files, calls and accounts: end-to-end encryption for direct messages, plugin isolation, the threat model and the known limitations.',
+    h1: 'NeyLivo Security',
+    lede: 'This page describes what actually protects your data in NeyLivo, and what does not. Where a protection is optional, off by default, or unproven, that is written here rather than left out.',
     toc: 'On this page',
     updated: 'Last updated',
 
@@ -59,11 +59,11 @@ const t = {
     ],
     accNo: 'There is no two-factor authentication with an authenticator app yet. Trusted devices and the recovery code are a partial substitute, not a replacement.',
 
-    passP: 'Ponoi does not store passwords. They are handled by Supabase Auth, which stores them as bcrypt hashes; the project writes no password storage code of its own.',
+    passP: 'NeyLivo does not store passwords. They are handled by Supabase Auth, which stores them as bcrypt hashes; the project writes no password storage code of its own.',
     passP2: 'The minimum password length is six characters, which is the platform default. That is short, and raising it is on the list of things to fix.',
-    passP3: '<b>One consequence worth understanding.</b> Your encryption key can be backed up to the server, locked with your account password (PBKDF2-SHA256, 250 000 iterations, AES-256-GCM). This exists so that logging out does not destroy your message history. The cost: the same password is also what you type into the login form, so a malicious or compromised authentication server could capture it and unlock that backup. Ponoi protects your messages from outsiders and from a database leak; it does not protect them from whoever controls the server itself.',
+    passP3: '<b>One consequence worth understanding.</b> Your encryption key can be backed up to the server, locked with your account password (PBKDF2-SHA256, 250 000 iterations, AES-256-GCM). This exists so that logging out does not destroy your message history. The cost: the same password is also what you type into the login form, so a malicious or compromised authentication server could capture it and unlock that backup. NeyLivo protects your messages from outsiders and from a database leak; it does not protect them from whoever controls the server itself.',
 
-    filesP: '<b>Attachments are the weakest part of Ponoi today, and it is being fixed.</b> Files you send are uploaded to cloud storage that is configured as public: anyone who has, or can construct, the link to a file can download it without logging in. Access rules protect the database, not this storage bucket.',
+    filesP: '<b>Attachments are the weakest part of NeyLivo today, and it is being fixed.</b> Files you send are uploaded to cloud storage that is configured as public: anyone who has, or can construct, the link to a file can download it without logging in. Access rules protect the database, not this storage bucket.',
     filesP2: 'There is a switch that fixes this for direct messages: <b>encrypt attachments</b>. With it on, each file is encrypted in your browser with its own AES-256-GCM key before upload, stored under a neutral name with no file type, and the key travels inside the encrypted message — so it can only be obtained by decrypting the conversation. Like the other encryption switches, it is off by default.',
     filesP3: 'Until the storage layer is closed, treat anything you send without attachment encryption as a file that is technically public. This limitation is listed below and in the project’s own audit.',
 
@@ -73,7 +73,7 @@ const t = {
     callsP4: 'Without call encryption, media is decrypted at the media server, as in any ordinary group call. Server voice channels are not end-to-end encrypted.',
 
     isoP: 'Plugin code does not run in the app. It runs in a Web Worker, which the browser gives no DOM, no cookies and no access to the page — so a plugin cannot read your session, cannot draw a fake login window, and cannot reach into the interface.',
-    isoP2: 'Plugins that provide a full page (for games, visualisers, 3D scenes) get an <code>&lt;iframe sandbox="allow-scripts"&gt;</code> <b>without</b> <code>allow-same-origin</code>. That gives the page a unique opaque origin: it has its own DOM and can use WebGL, WebAssembly and audio, but it is a different origin from Ponoi and can touch neither the app’s document nor its storage.',
+    isoP2: 'Plugins that provide a full page (for games, visualisers, 3D scenes) get an <code>&lt;iframe sandbox="allow-scripts"&gt;</code> <b>without</b> <code>allow-same-origin</code>. That gives the page a unique opaque origin: it has its own DOM and can use WebGL, WebAssembly and audio, but it is a different origin from NeyLivo and can touch neither the app’s document nor its storage.',
     isoP3: 'These are browser boundaries, not checks in our code that a clever plugin could talk its way around. Everything a plugin can do arrives through one dispatcher, and every call is checked against the permissions the plugin declared. There is a dedicated test suite that attacks these boundaries deliberately.',
 
     permP: 'Before installing anything, you see the plugin’s name, author, version and the exact list of what it is asking for, in plain language — for example “Send messages on your behalf” or “Reach the internet (only the listed sites)”. There are 23 such permissions.',
@@ -84,7 +84,7 @@ const t = {
     netL: [
       'Only <code>https:</code> and <code>wss:</code>; plain HTTP is refused',
       'Only the declared domains, or every domain if the plugin asked for that openly and you accepted it',
-      'Never to Ponoi itself or to its backend — a plugin cannot use your session against the app',
+      'Never to NeyLivo itself or to its backend — a plugin cannot use your session against the app',
       'Headers from an allowlist only; <code>Cookie</code> is never allowed',
     ],
 
@@ -96,9 +96,9 @@ const t = {
       'That a call took place, between whom and for how long',
       'Approximate connection times, and the IP address your device connects from — as with any online service',
     ],
-    metaP2: 'Message length is hidden by padding, and encrypted attachments carry no file name or type. The rest of the list above is metadata that Ponoi does not currently minimise.',
+    metaP2: 'Message length is hidden by padding, and encrypted attachments carry no file name or type. The rest of the list above is metadata that NeyLivo does not currently minimise.',
 
-    infraP: 'Ponoi is not self-hosted infrastructure. It runs on:',
+    infraP: 'NeyLivo is not self-hosted infrastructure. It runs on:',
     infraL: [
       ['Supabase', 'Database, accounts, file storage and the realtime connection. Access is governed by row-level security rules, which are tested against a real Postgres on every change.'],
       ['LiveKit', 'Voice, video and screen sharing. Handles media only.'],
@@ -106,7 +106,7 @@ const t = {
     ],
     infraP2: 'The <a href="/privacy/">privacy page</a> lists every third-party service the app talks to, including the ones that only see an IP address.',
 
-    threatH1: 'What Ponoi protects against',
+    threatH1: 'What NeyLivo protects against',
     threatL1: [
       'Someone else reading your one-to-one messages, with encryption on — including the operator of the database',
       'Another user reading data that is not theirs: access rules are enforced in the database, not in the app',
@@ -114,7 +114,7 @@ const t = {
       'Passive collection: there is no analytics, no crash reporting and no advertising code to leak anything',
       'Someone with your database dump reading your recovery code, or your key backup without your password',
     ],
-    threatH2: 'What Ponoi does not protect against',
+    threatH2: 'What NeyLivo does not protect against',
     threatL2: [
       'A malicious operator of the authentication server, who could capture your password as you log in and unlock your key backup',
       'Anyone reading group conversations or server channels at the database — those are not end-to-end encrypted',
@@ -137,7 +137,7 @@ const t = {
     ],
     limP2: 'A full technical write-up of the same findings, with file references, is published in the repository as <code>SECURITY_ARCHITECTURE_AUDIT.md</code>.',
 
-    repP: 'If you find a vulnerability, please report it privately first, and give it a chance to be fixed before it is public. That protects the people using Ponoi, not the project’s reputation.',
+    repP: 'If you find a vulnerability, please report it privately first, and give it a chance to be fixed before it is public. That protects the people using NeyLivo, not the project’s reputation.',
     repL: [
       'Use GitHub’s private vulnerability reporting on the repository, or open a minimal issue asking for a private channel — without the details.',
       'Include what you did, what happened, and why you believe it is a problem. A short reproduction is worth more than a long description.',
@@ -148,10 +148,10 @@ const t = {
   },
 
   ru: {
-    title: 'Безопасность Ponoi — устройство защиты и её пределы',
-    desc: 'Как Ponoi (Поной) защищает сообщения, файлы, звонки и учётные записи: сквозное шифрование личной переписки, изоляция плагинов, модель угроз и известные слабые места.',
-    h1: 'Безопасность Ponoi',
-    lede: 'Здесь описано, что в Ponoi действительно защищает ваши данные, а что нет. Если защита необязательна, выключена по умолчанию или не проверена в жизни — это написано, а не опущено.',
+    title: 'Безопасность NeyLivo — устройство защиты и её пределы',
+    desc: 'Как NeyLivo (Нейливо) защищает сообщения, файлы, звонки и учётные записи: сквозное шифрование личной переписки, изоляция плагинов, модель угроз и известные слабые места.',
+    h1: 'Безопасность NeyLivo',
+    lede: 'Здесь описано, что в NeyLivo действительно защищает ваши данные, а что нет. Если защита необязательна, выключена по умолчанию или не проверена в жизни — это написано, а не опущено.',
     toc: 'На этой странице',
     updated: 'Обновлено',
 
@@ -205,11 +205,11 @@ const t = {
     ],
     accNo: 'Двухфакторной проверки с приложением-аутентификатором пока нет. Доверенные устройства и код восстановления — частичная замена, а не полная.',
 
-    passP: 'Ponoi не хранит пароли. Ими занимается Supabase Auth, который держит их как хеши bcrypt; собственного кода хранения паролей в проекте нет.',
+    passP: 'NeyLivo не хранит пароли. Ими занимается Supabase Auth, который держит их как хеши bcrypt; собственного кода хранения паролей в проекте нет.',
     passP2: 'Минимальная длина пароля — шесть символов, это значение платформы по умолчанию. Это мало, и поднять порог — в списке того, что надо исправить.',
-    passP3: '<b>Одно следствие, которое стоит понимать.</b> Ключ шифрования можно положить на сервер резервной копией, запертой паролем от учётной записи (PBKDF2-SHA256, 250 000 повторов, AES-256-GCM). Это сделано, чтобы выход из аккаунта не уничтожал переписку. Цена: тот же пароль вводится в форму входа, и недобросовестный или взломанный сервер аутентификации мог бы перехватить его и открыть эту копию. Ponoi защищает переписку от постороннего и от утечки базы, но не от того, кто управляет самим сервером.',
+    passP3: '<b>Одно следствие, которое стоит понимать.</b> Ключ шифрования можно положить на сервер резервной копией, запертой паролем от учётной записи (PBKDF2-SHA256, 250 000 повторов, AES-256-GCM). Это сделано, чтобы выход из аккаунта не уничтожал переписку. Цена: тот же пароль вводится в форму входа, и недобросовестный или взломанный сервер аутентификации мог бы перехватить его и открыть эту копию. NeyLivo защищает переписку от постороннего и от утечки базы, но не от того, кто управляет самим сервером.',
 
-    filesP: '<b>Вложения — самое слабое место Ponoi сегодня, и оно исправляется.</b> Отправленные файлы загружаются в облачное хранилище, настроенное как публичное: любой, у кого есть ссылка на файл или кто сможет её составить, скачает его без входа. Правила доступа защищают базу данных, но не это хранилище.',
+    filesP: '<b>Вложения — самое слабое место NeyLivo сегодня, и оно исправляется.</b> Отправленные файлы загружаются в облачное хранилище, настроенное как публичное: любой, у кого есть ссылка на файл или кто сможет её составить, скачает его без входа. Правила доступа защищают базу данных, но не это хранилище.',
     filesP2: 'Для личной переписки есть переключатель, который это чинит: <b>шифровать вложения</b>. С ним каждый файл шифруется прямо в браузере своим ключом AES-256-GCM ещё до отправки, лежит под нейтральным именем и без типа, а ключ едет внутри зашифрованного сообщения — то есть достать его можно, только расшифровав переписку.  Как и остальные переключатели шифрования, по умолчанию он выключен.',
     filesP3: 'Пока хранилище не закрыто, считайте всё отправленное без шифрования вложений технически общедоступным. Это ограничение перечислено ниже и в собственном аудите проекта.',
 
@@ -219,7 +219,7 @@ const t = {
     callsP4: 'Без шифрования звонка поток расшифровывается на медиасервере — как в любом обычном групповом звонке. Голосовые каналы серверов сквозным шифрованием не защищены.',
 
     isoP: 'Код плагина работает не в приложении. Он работает в Web Worker, которому браузер не даёт ни DOM, ни куки, ни доступа к странице, — поэтому плагин не может прочитать вашу сессию, не может нарисовать поддельное окно входа и не может влезть в интерфейс.',
-    isoP2: 'Плагинам, которым нужна целая страница (игры, визуализаторы, 3D-сцены), достаётся <code>&lt;iframe sandbox="allow-scripts"&gt;</code> <b>без</b> <code>allow-same-origin</code>. Это даёт странице уникальное чужое происхождение: у неё есть свой DOM, работают WebGL, WebAssembly и звук, но она — другое происхождение, и ни документа Ponoi, ни его хранилища ей не достаётся.',
+    isoP2: 'Плагинам, которым нужна целая страница (игры, визуализаторы, 3D-сцены), достаётся <code>&lt;iframe sandbox="allow-scripts"&gt;</code> <b>без</b> <code>allow-same-origin</code>. Это даёт странице уникальное чужое происхождение: у неё есть свой DOM, работают WebGL, WebAssembly и звук, но она — другое происхождение, и ни документа NeyLivo, ни его хранилища ей не достаётся.',
     isoP3: 'Это границы браузера, а не наши проверки, которые хитрый плагин уговорит. Всё, что плагину доступно, проходит через один диспетчер, и каждый вызов сверяется с объявленными разрешениями. На попытки обхода есть отдельный набор проверок, который нарочно штурмует эти границы.',
 
     permP: 'Перед установкой видно имя плагина, автора, версию и точный список того, что он просит, человеческими словами — например «Отправлять сообщения от твоего имени» или «Обращаться в интернет (только к указанным сайтам)». Всего таких разрешений 23.',
@@ -230,7 +230,7 @@ const t = {
     netL: [
       'Только <code>https:</code> и <code>wss:</code>, обычный HTTP отклоняется',
       'Только объявленные домены — или любые, если плагин попросил об этом открыто и человек согласился',
-      'Никогда к самому Ponoi и его серверу: плагин не может обратить вашу сессию против приложения',
+      'Никогда к самому NeyLivo и его серверу: плагин не может обратить вашу сессию против приложения',
       'Заголовки только из белого списка; <code>Cookie</code> не разрешён никогда',
     ],
 
@@ -242,9 +242,9 @@ const t = {
       'Что состоялся звонок, между кем и сколько он длился',
       'Примерное время подключений и IP-адрес, с которого устройство подключается, — как у любой сетевой службы',
     ],
-    metaP2: 'Длина сообщения скрыта дополнением, а у зашифрованного вложения нет ни имени файла, ни типа. Остальное из списка выше — метаданные, которые Ponoi сейчас не сокращает.',
+    metaP2: 'Длина сообщения скрыта дополнением, а у зашифрованного вложения нет ни имени файла, ни типа. Остальное из списка выше — метаданные, которые NeyLivo сейчас не сокращает.',
 
-    infraP: 'Ponoi не держит собственную инфраструктуру. Он работает на:',
+    infraP: 'NeyLivo не держит собственную инфраструктуру. Он работает на:',
     infraL: [
       ['Supabase', 'База данных, учётные записи, хранилище файлов и соединение реального времени. Доступ определяют правила уровня строк, которые проверяются на настоящем Postgres при каждом изменении.'],
       ['LiveKit', 'Голос, видео и демонстрация экрана. Занимается только медиапотоком.'],
@@ -252,7 +252,7 @@ const t = {
     ],
     infraP2: 'На <a href="/ru/privacy/">странице приватности</a> перечислены все сторонние службы, с которыми разговаривает приложение, включая те, что видят только IP-адрес.',
 
-    threatH1: 'От чего Ponoi защищает',
+    threatH1: 'От чего NeyLivo защищает',
     threatL1: [
       'От чтения вашей переписки один на один посторонним — при включённом шифровании, включая того, кто держит базу данных',
       'От чтения чужих данных другим пользователем: правила доступа работают в базе, а не в приложении',
@@ -260,7 +260,7 @@ const t = {
       'От пассивного сбора: нет ни аналитики, ни сбора падений, ни рекламного кода, которым что-то утекало бы',
       'От чтения кода восстановления по дампу базы и от вскрытия резервной копии ключа без пароля',
     ],
-    threatH2: 'От чего Ponoi не защищает',
+    threatH2: 'От чего NeyLivo не защищает',
     threatL2: [
       'От недобросовестного владельца сервера аутентификации: он мог бы перехватить пароль при входе и открыть резервную копию ключа',
       'От чтения групповых бесед и каналов серверов в базе — они не защищены сквозным шифрованием',
@@ -283,7 +283,7 @@ const t = {
     ],
     limP2: 'Полный технический разбор тех же находок, со ссылками на файлы, опубликован в репозитории как <code>SECURITY_ARCHITECTURE_AUDIT.md</code>.',
 
-    repP: 'Если вы нашли уязвимость, сообщите о ней сначала лично и дайте шанс её починить до того, как о ней узнают все. Это защищает людей, которые пользуются Ponoi, а не репутацию проекта.',
+    repP: 'Если вы нашли уязвимость, сообщите о ней сначала лично и дайте шанс её починить до того, как о ней узнают все. Это защищает людей, которые пользуются NeyLivo, а не репутацию проекта.',
     repL: [
       'Воспользуйтесь приватным сообщением об уязвимости в репозитории на GitHub или заведите короткое обращение с просьбой о личном канале — без подробностей.',
       'Опишите, что вы сделали, что произошло и почему считаете это проблемой. Короткое воспроизведение ценнее длинного описания.',
@@ -311,7 +311,7 @@ export default {
     <p class="eyebrow">${lang === 'en' ? 'Security' : 'Безопасность'}</p>
     <h1>${s.h1}</h1>
     <p class="lede">${s.lede}</p>
-    <p class="stamp">${s.updated}: ${DATE_LABEL[lang]} · Ponoi ${ctx.release.version}</p>
+    <p class="stamp">${s.updated}: ${DATE_LABEL[lang]} · NeyLivo ${ctx.release.version}</p>
   </div>
 </section>
 
