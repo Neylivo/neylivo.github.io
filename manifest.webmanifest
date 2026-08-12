@@ -1,0 +1,23 @@
+{
+  "name": "Ponoi",
+  "short_name": "Ponoi",
+  "description": "Ponoi is a privacy-focused extensible messenger for conversations, communities, calls, music and plugins.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#0e1012",
+  "theme_color": "#0e1012",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

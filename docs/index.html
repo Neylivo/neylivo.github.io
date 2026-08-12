@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ponoi Documentation</title>
+<meta name="description" content="Documentation for Ponoi: the plugin format and API, security architecture, the release process and the source code.">
+<link rel="canonical" href="https://ponoiai.github.io/docs/">
+<link rel="alternate" hreflang="en" href="https://ponoiai.github.io/docs/">
+  <link rel="alternate" hreflang="ru" href="https://ponoiai.github.io/ru/docs/">
+<link rel="alternate" hreflang="x-default" href="https://ponoiai.github.io/docs/">
+<meta property="og:site_name" content="Ponoi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ponoi Documentation">
+<meta property="og:description" content="Documentation for Ponoi: the plugin format and API, security architecture, the release process and the source code.">
+<meta property="og:url" content="https://ponoiai.github.io/docs/">
+<meta property="og:image" content="https://ponoiai.github.io/assets/ponoi-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ponoi Documentation">
+<meta name="twitter:description" content="Documentation for Ponoi: the plugin format and API, security architecture, the release process and the source code.">
+<meta name="twitter:image" content="https://ponoiai.github.io/assets/ponoi-og.png">
+<meta name="theme-color" content="#0e1012" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/site.js" defer></script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path fill="currentColor" fill-rule="evenodd" d="M3.1 17.08L14.36 23.46L14.55 30.97L10.23 28.53L9.1 27.96L8.91 28.15L8.91 45.42L23.37 53.68L23.55 47.11L29.94 50.67L29.75 64L3.1 48.8L3.1 17.27ZM60.72 17.08L60.9 48.8L34.06 64L34.06 50.67L40.45 47.11L40.45 53.49L40.82 53.68L55.27 45.23L55.27 28.15L55.09 27.96L49.64 30.97L49.64 23.46L60.53 17.27ZM31.81 0L39.32 3.57L58.84 13.7L47.39 20.08L41.38 16.7L46.26 14.08L46.45 13.89L46.08 13.51L32 6.38L18.3 13.33L17.74 13.89L17.92 14.08L22.8 16.7L16.42 20.08L5.35 13.7L31.62 0.19ZM46.08 25.34L46.08 33.03L41.2 35.85L40.45 36.6L40.45 43.17L34.06 46.55L34.06 32.28L45.89 25.52ZM17.92 25.34L29.94 32.28L29.94 46.55L26.37 44.67L23.55 42.98L23.55 36.41L17.92 32.84L17.92 25.52ZM26.18 18.77L27.12 18.96L32 21.77L36.32 19.33L38.01 18.77L44.01 22.15L32 28.9L20.18 22.15L25.99 18.96Z"/>
+</svg><span>Ponoi</span></a>
+    <nav class="nav-wide" aria-label="Main">
+        <a href="/features/">Features</a>
+        <a href="/security/">Security</a>
+        <a href="/plugins/">Plugins</a>
+        <a href="/trackoteka/">Trackoteka</a>
+        <a href="/download/">Download</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-quiet" href="https://ponoiai.github.io/ponoi/">Open Ponoi</a>
+      <a class="btn btn-solid" href="/download/">Download</a>
+    </div>
+    <details class="nav-mob">
+      <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span>Menu</summary>
+      <nav aria-label="Main">
+        <a href="/features/">Features</a>
+        <a href="/security/">Security</a>
+        <a href="/plugins/">Plugins</a>
+        <a href="/trackoteka/">Trackoteka</a>
+        <a href="/download/">Download</a>
+        <a href="https://ponoiai.github.io/ponoi/">Open Ponoi</a>
+        <a href="https://ponoiai.github.io/ru/docs/" hreflang="ru" lang="ru">Русский</a>
+      </nav>
+    </details>
+    <a class="lang-sw" href="https://ponoiai.github.io/ru/docs/" hreflang="ru" lang="ru"
+       title="Language">Русский</a>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Documentation</p>
+    <h1>Documentation</h1>
+    <p class="lede">Ponoi is developed in the open, and the technical documentation lives with the code it describes. This page is the index.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Using Ponoi</h2>
+  <div class="grid g2"><article class="card"><h3><a href="/features/">Features</a></h3><p>What the app can do, area by area.</p></article><article class="card"><h3><a href="/download/">Download and install</a></h3><p>Windows, Android and the web version, with system requirements.</p></article><article class="card"><h3><a href="/trackoteka/">Trackoteka</a></h3><p>The music system: library, playlists, lyrics, listening together.</p></article><article class="card"><h3><a href="/faq/">Questions and answers</a></h3><p>Short answers to the common ones.</p></article></div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <h2 class="mt0">Building plugins</h2>
+    <p class="prose">A plugin is a single <code>.ponoi</code> JavaScript file. The format, the whole API and the permission list are documented in the repository, and there is an editor inside the app that runs your code as you write it.</p>
+    <div class="grid g2"><article class="card"><h3><a href="https://github.com/ponoiai/ponoi/blob/main/PLUGINS.md" rel="noopener">PLUGINS.md</a></h3><p>The plugin format, the API and how isolation works.</p></article><article class="card"><h3><a href="/plugins/">Plugins on this site</a></h3><p>What plugins can do and how permissions work, in prose.</p></article></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Security and privacy</h2>
+  <div class="grid g2"><article class="card"><h3><a href="/security/">Security architecture</a></h3><p>What protects what, the threat model and the known limitations.</p></article><article class="card"><h3><a href="/privacy/">Privacy</a></h3><p>Every kind of data the app handles, item by item.</p></article><article class="card"><h3><a href="https://github.com/ponoiai/ponoi/blob/main/SECURITY_ARCHITECTURE_AUDIT.md" rel="noopener">Security audit</a></h3><p>The project’s own technical audit, with file references.</p></article><article class="card"><h3><a href="https://github.com/ponoiai/ponoi/blob/main/SECURITY.md" rel="noopener">Reporting vulnerabilities</a></h3><p>How to report a problem responsibly.</p></article><article class="card"><h3><a href="https://github.com/ponoiai/ponoi/blob/main/E2EE_DESIGN.md" rel="noopener">End-to-end encryption design</a></h3><p>The design work for encrypting groups and channels, before any of it is built.</p></article></div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <h2 class="mt0">Source and releases</h2>
+    <div class="grid g2"><article class="card"><h3><a href="https://github.com/ponoiai/ponoi" rel="noopener">Repository</a></h3><p>The whole application: client, database migrations and build workflows.</p></article><article class="card"><h3><a href="https://github.com/ponoiai/ponoi/releases" rel="noopener">Releases</a></h3><p>Every version with its installer and APK.</p></article><article class="card"><h3><a href="/changelog/">Changelog</a></h3><p>What changed in each version.</p></article><article class="card"><h3><a href="https://github.com/ponoiai/ponoi#readme" rel="noopener">README</a></h3><p>What Ponoi is, what works today and what is still planned.</p></article></div>
+    <p class="prose muted" style="margin-top:22px">Developer documentation is intentionally kept in the repository rather than copied onto this site: two copies of the same instructions drift apart, and the one on the website is always the stale one.</p>
+    <p class="prose"><a href="https://ponoiai.github.io/ponoi/">Open the web app →</a></p>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot">
+      <div class="wrap">
+        <div class="f-brand">
+          <span class="f-logo"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path fill="currentColor" fill-rule="evenodd" d="M3.1 17.08L14.36 23.46L14.55 30.97L10.23 28.53L9.1 27.96L8.91 28.15L8.91 45.42L23.37 53.68L23.55 47.11L29.94 50.67L29.75 64L3.1 48.8L3.1 17.27ZM60.72 17.08L60.9 48.8L34.06 64L34.06 50.67L40.45 47.11L40.45 53.49L40.82 53.68L55.27 45.23L55.27 28.15L55.09 27.96L49.64 30.97L49.64 23.46L60.53 17.27ZM31.81 0L39.32 3.57L58.84 13.7L47.39 20.08L41.38 16.7L46.26 14.08L46.45 13.89L46.08 13.51L32 6.38L18.3 13.33L17.74 13.89L17.92 14.08L22.8 16.7L16.42 20.08L5.35 13.7L31.62 0.19ZM46.08 25.34L46.08 33.03L41.2 35.85L40.45 36.6L40.45 43.17L34.06 46.55L34.06 32.28L45.89 25.52ZM17.92 25.34L29.94 32.28L29.94 46.55L26.37 44.67L23.55 42.98L23.55 36.41L17.92 32.84L17.92 25.52ZM26.18 18.77L27.12 18.96L32 21.77L36.32 19.33L38.01 18.77L44.01 22.15L32 28.9L20.18 22.15L25.99 18.96Z"/>
+</svg><b>Ponoi</b></span>
+          <p>Ponoi is an independent project. This site is the official source of information about it.</p>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">Product</h2>
+          <ul>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/download/">Download</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/trackoteka/">Trackoteka</a></li>
+            <li><a href="/changelog/">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">Trust</h2>
+          <ul>
+            <li><a href="/security/">Security</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/transparency/">Transparency</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">About</h2>
+          <ul>
+            <li><a href="/about/">What is Ponoi?</a></li>
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="/press/">Press kit</a></li>
+            <li><a href="https://github.com/ponoiai/ponoi" rel="noopener">Source code</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

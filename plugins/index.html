@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ponoi Plugins — Extend Your Messenger</title>
+<meta name="description" content="Ponoi plugins are single .ponoi JavaScript files that run sandboxed in a Web Worker with declared permissions. Add buttons, commands, panels, whole windows, bots and games.">
+<link rel="canonical" href="https://ponoiai.github.io/plugins/">
+<link rel="alternate" hreflang="en" href="https://ponoiai.github.io/plugins/">
+  <link rel="alternate" hreflang="ru" href="https://ponoiai.github.io/ru/plugins/">
+<link rel="alternate" hreflang="x-default" href="https://ponoiai.github.io/plugins/">
+<meta property="og:site_name" content="Ponoi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ponoi Plugins — Extend Your Messenger">
+<meta property="og:description" content="Ponoi plugins are single .ponoi JavaScript files that run sandboxed in a Web Worker with declared permissions. Add buttons, commands, panels, whole windows, bots and games.">
+<meta property="og:url" content="https://ponoiai.github.io/plugins/">
+<meta property="og:image" content="https://ponoiai.github.io/assets/ponoi-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ponoi Plugins — Extend Your Messenger">
+<meta name="twitter:description" content="Ponoi plugins are single .ponoi JavaScript files that run sandboxed in a Web Worker with declared permissions. Add buttons, commands, panels, whole windows, bots and games.">
+<meta name="twitter:image" content="https://ponoiai.github.io/assets/ponoi-og.png">
+<meta name="theme-color" content="#0e1012" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/site.js" defer></script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path fill="currentColor" fill-rule="evenodd" d="M3.1 17.08L14.36 23.46L14.55 30.97L10.23 28.53L9.1 27.96L8.91 28.15L8.91 45.42L23.37 53.68L23.55 47.11L29.94 50.67L29.75 64L3.1 48.8L3.1 17.27ZM60.72 17.08L60.9 48.8L34.06 64L34.06 50.67L40.45 47.11L40.45 53.49L40.82 53.68L55.27 45.23L55.27 28.15L55.09 27.96L49.64 30.97L49.64 23.46L60.53 17.27ZM31.81 0L39.32 3.57L58.84 13.7L47.39 20.08L41.38 16.7L46.26 14.08L46.45 13.89L46.08 13.51L32 6.38L18.3 13.33L17.74 13.89L17.92 14.08L22.8 16.7L16.42 20.08L5.35 13.7L31.62 0.19ZM46.08 25.34L46.08 33.03L41.2 35.85L40.45 36.6L40.45 43.17L34.06 46.55L34.06 32.28L45.89 25.52ZM17.92 25.34L29.94 32.28L29.94 46.55L26.37 44.67L23.55 42.98L23.55 36.41L17.92 32.84L17.92 25.52ZM26.18 18.77L27.12 18.96L32 21.77L36.32 19.33L38.01 18.77L44.01 22.15L32 28.9L20.18 22.15L25.99 18.96Z"/>
+</svg><span>Ponoi</span></a>
+    <nav class="nav-wide" aria-label="Main">
+        <a href="/features/">Features</a>
+        <a href="/security/">Security</a>
+        <a href="/plugins/" aria-current="page">Plugins</a>
+        <a href="/trackoteka/">Trackoteka</a>
+        <a href="/download/">Download</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-quiet" href="https://ponoiai.github.io/ponoi/">Open Ponoi</a>
+      <a class="btn btn-solid" href="/download/">Download</a>
+    </div>
+    <details class="nav-mob">
+      <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span>Menu</summary>
+      <nav aria-label="Main">
+        <a href="/features/">Features</a>
+        <a href="/security/">Security</a>
+        <a href="/plugins/" aria-current="page">Plugins</a>
+        <a href="/trackoteka/">Trackoteka</a>
+        <a href="/download/">Download</a>
+        <a href="https://ponoiai.github.io/ponoi/">Open Ponoi</a>
+        <a href="https://ponoiai.github.io/ru/plugins/" hreflang="ru" lang="ru">Русский</a>
+      </nav>
+    </details>
+    <a class="lang-sw" href="https://ponoiai.github.io/ru/plugins/" hreflang="ru" lang="ru"
+       title="Language">Русский</a>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Plugins</p>
+    <h1>Make Ponoi yours.</h1>
+    <p class="lede"><b>Extend Ponoi with plugins distributed as a single <code>.ponoi</code> file.</b> Write one in an afternoon, send it to a friend in a chat, and it installs from the message.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="https://github.com/ponoiai/ponoi/blob/main/PLUGINS.md" rel="noopener">Plugin documentation</a>
+      <a class="btn btn-quiet" href="https://github.com/ponoiai/ponoi/blob/main/PLUGINS.md#формат-файла" rel="noopener">Create your first plugin</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap prose">
+  <h2 class="mt0">Why this exists</h2>
+  <p>Most messengers let you pick a theme. Ponoi lets you change what the app does. If you want a button in the composer that rolls dice, a panel that shows your team’s deploy status, a slash command that talks to a language model, a game that lives in a window inside the app, or a bot that greets people in your server — you write it yourself instead of asking somebody to add it.</p>
+  <p>A plugin is not a package with a build step and a manifest folder. It is one JavaScript file with a comment at the top:</p>
+</section>
+
+<figure class="wrap" style="margin:0 auto 40px">
+  <pre style="overflow-x:auto;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:20px;font-family:var(--mono);font-size:13.5px;line-height:1.6"><code>/**
+ * @name        Night mode
+ * @id          nightmode
+ * @version     1.0.0
+ * @author      you
+ * @description Highlights messages and adds a command
+ * @permissions ui, css, commands, messages.write
+ */
+
+function onLoad(ponoi) {
+  ponoi.css('.msg { border-left: 2px solid hotpink }')
+
+  ponoi.ui.addComposerButton({
+    key: 'wave', icon: 'flame', tooltip: 'Wave',
+    onClick: () =&gt; ponoi.messages.send('o/'),
+  })
+
+  ponoi.commands.register('hello', 'Say hello', args =&gt;
+    ponoi.messages.send('Hello, ' + (args || 'world') + '!'))
+}</code></pre>
+  <figcaption class="muted" style="font-size:14px;margin-top:8px">A complete, working plugin.</figcaption>
+</figure>
+
+<section class="wrap prose">
+  <h2 class="mt0">One file, sent like any other file</h2>
+  <p>Install a plugin from a file in Settings → Plugins, or receive one in a conversation: the message shows a card with the name, author, version and the full list of permissions the plugin is asking for, and an Install button. There is also a built-in catalogue, and personal transfer codes if you want to hand a plugin to one specific person.</p>
+  <p>There is an editor inside the app, so you can write, run and fix a plugin without leaving Ponoi, and a workshop for plugins that need a 3D scene.</p>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <h2 class="mt0">What a plugin can do</h2>
+    <p class="prose">Around ninety API methods, grouped by what they touch. All of them go through one dispatcher that checks permissions on every call.</p>
+    <div class="grid g3">
+      <article class="card"><h3>Interface</h3><p>Buttons in the composer, actions on a message, context menu items, header buttons, hotkeys, your own settings page, side panels, and CSS for the whole app.</p></article>
+      <article class="card"><h3>Messages</h3><p>Read the open channel, send messages, add reactions, delete, intercept a message before it is sent or before it is rendered, and hook file uploads — for example to strip location data from photos.</p></article>
+      <article class="card"><h3>Windows and pages</h3><p>Open a real window inside Ponoi with your own HTML: a full DOM with WebGL, WebGPU, WebAssembly, audio and unthrottled animation. Frameless and transparent windows are supported; the plugin can move them and knows when the user moves them.</p></article>
+      <article class="card"><h3>Storage and data</h3><p>Key-value storage on the device, a small local database with tables and queries, and asset storage for files the plugin ships or downloads.</p></article>
+      <article class="card"><h3>Network</h3><p>HTTP requests, streaming responses and WebSocket connections — restricted to the domains the plugin declared.</p></article>
+      <article class="card"><h3>Music</h3><p>Read what is playing, control playback, read the library and add tracks to the queue.</p></article>
+      <article class="card"><h3>Commands and notifications</h3><p>Slash commands with named and typed arguments, toasts, dialogs, confirmations and prompts.</p></article>
+      <article class="card"><h3>Between plugins</h3><p>Plugins can register services and call each other, so one can build on another instead of duplicating it.</p></article>
+      <article class="card"><h3>Background and input</h3><p>Timers that keep running while you use the app, and gamepad input.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="mt0">Built with permissions in mind</h2>
+    <p class="prose">Everything above is only reachable if the plugin declared it, and you agreed at install time.</p>
+    <div class="prose">
+      <h3>Isolation is the browser’s, not ours</h3>
+      <p>Plugin code runs in a <b>Web Worker</b>. A worker has no DOM, no cookies and no access to the page, so a plugin cannot read your session, cannot draw a fake login window and cannot reach into the interface. Plugins with their own page get an <code>&lt;iframe sandbox="allow-scripts"&gt;</code> <b>without</b> <code>allow-same-origin</code> — a unique opaque origin, with its own DOM but no access to Ponoi’s document or storage.</p>
+      <p>These are boundaries enforced by the browser, not checks in our code that a clever plugin could argue with.</p>
+      <h3>23 permissions, in plain language</h3>
+      <p>The install screen shows exactly what the plugin asked for, worded for a person and not for a developer: “Send messages on your behalf”, “See messages in the open channel”, “Reach the internet (only the listed sites)”, “Change the appearance of the app”. You can turn a plugin off or remove it at any time.</p>
+      <h3>Network is an allowlist</h3>
+      <p>A plugin declares its domains in the header. Only <code>https:</code> and <code>wss:</code> are allowed, <code>Cookie</code> is never allowed, and a plugin can never make requests to Ponoi itself or its backend — it cannot turn your own session against the app. A plugin may ask for access to <em>any</em> site, and if it does, the install screen says so in red.</p>
+    </div>
+    <div class="prose">
+      <h3>What the sandbox does not do</h3>
+      <div class="note note-warn">
+        <p>A plugin cannot escape the browser. It absolutely can do what you allowed it to do. If you granted “send messages on your behalf”, it can send messages as you, whenever it likes — there are no rate limits, by design. The app says this before you install, because the real protection here is your judgement about who wrote the plugin, not a quota.</p>
+        <p>Install plugins you trust, from people you trust, and turn off anything that starts behaving oddly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap prose">
+    <h2 class="mt0">Start writing</h2>
+    <p>The plugin format, the full API and the permission list are documented in the repository. The fastest way in is the editor inside the app: Settings → Plugins → Create.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="https://github.com/ponoiai/ponoi/blob/main/PLUGINS.md" rel="noopener">Plugin documentation</a>
+      <a class="btn btn-quiet" href="/docs/">All documentation</a>
+    </div>
+    <p class="muted"><small>Opens the plugin guide in the repository — the same text the in-app guide shows.</small></p>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot">
+      <div class="wrap">
+        <div class="f-brand">
+          <span class="f-logo"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path fill="currentColor" fill-rule="evenodd" d="M3.1 17.08L14.36 23.46L14.55 30.97L10.23 28.53L9.1 27.96L8.91 28.15L8.91 45.42L23.37 53.68L23.55 47.11L29.94 50.67L29.75 64L3.1 48.8L3.1 17.27ZM60.72 17.08L60.9 48.8L34.06 64L34.06 50.67L40.45 47.11L40.45 53.49L40.82 53.68L55.27 45.23L55.27 28.15L55.09 27.96L49.64 30.97L49.64 23.46L60.53 17.27ZM31.81 0L39.32 3.57L58.84 13.7L47.39 20.08L41.38 16.7L46.26 14.08L46.45 13.89L46.08 13.51L32 6.38L18.3 13.33L17.74 13.89L17.92 14.08L22.8 16.7L16.42 20.08L5.35 13.7L31.62 0.19ZM46.08 25.34L46.08 33.03L41.2 35.85L40.45 36.6L40.45 43.17L34.06 46.55L34.06 32.28L45.89 25.52ZM17.92 25.34L29.94 32.28L29.94 46.55L26.37 44.67L23.55 42.98L23.55 36.41L17.92 32.84L17.92 25.52ZM26.18 18.77L27.12 18.96L32 21.77L36.32 19.33L38.01 18.77L44.01 22.15L32 28.9L20.18 22.15L25.99 18.96Z"/>
+</svg><b>Ponoi</b></span>
+          <p>Ponoi is an independent project. This site is the official source of information about it.</p>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">Product</h2>
+          <ul>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/download/">Download</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/trackoteka/">Trackoteka</a></li>
+            <li><a href="/changelog/">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">Trust</h2>
+          <ul>
+            <li><a href="/security/">Security</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/transparency/">Transparency</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">About</h2>
+          <ul>
+            <li><a href="/about/">What is Ponoi?</a></li>
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="/press/">Press kit</a></li>
+            <li><a href="https://github.com/ponoiai/ponoi" rel="noopener">Source code</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

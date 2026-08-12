@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ponoi Security — Security Architecture and Privacy</title>
+<meta name="description" content="How Ponoi protects messages, files, calls and accounts: end-to-end encryption for direct messages, plugin isolation, the threat model and the known limitations.">
+<link rel="canonical" href="https://ponoiai.github.io/security/">
+<link rel="alternate" hreflang="en" href="https://ponoiai.github.io/security/">
+  <link rel="alternate" hreflang="ru" href="https://ponoiai.github.io/ru/security/">
+<link rel="alternate" hreflang="x-default" href="https://ponoiai.github.io/security/">
+<meta property="og:site_name" content="Ponoi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ponoi Security — Security Architecture and Privacy">
+<meta property="og:description" content="How Ponoi protects messages, files, calls and accounts: end-to-end encryption for direct messages, plugin isolation, the threat model and the known limitations.">
+<meta property="og:url" content="https://ponoiai.github.io/security/">
+<meta property="og:image" content="https://ponoiai.github.io/assets/ponoi-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ponoi Security — Security Architecture and Privacy">
+<meta name="twitter:description" content="How Ponoi protects messages, files, calls and accounts: end-to-end encryption for direct messages, plugin isolation, the threat model and the known limitations.">
+<meta name="twitter:image" content="https://ponoiai.github.io/assets/ponoi-og.png">
+<meta name="theme-color" content="#0e1012" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/icon.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/site.js" defer></script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/"><svg class="mark" width="26" height="26" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path fill="currentColor" fill-rule="evenodd" d="M3.1 17.08L14.36 23.46L14.55 30.97L10.23 28.53L9.1 27.96L8.91 28.15L8.91 45.42L23.37 53.68L23.55 47.11L29.94 50.67L29.75 64L3.1 48.8L3.1 17.27ZM60.72 17.08L60.9 48.8L34.06 64L34.06 50.67L40.45 47.11L40.45 53.49L40.82 53.68L55.27 45.23L55.27 28.15L55.09 27.96L49.64 30.97L49.64 23.46L60.53 17.27ZM31.81 0L39.32 3.57L58.84 13.7L47.39 20.08L41.38 16.7L46.26 14.08L46.45 13.89L46.08 13.51L32 6.38L18.3 13.33L17.74 13.89L17.92 14.08L22.8 16.7L16.42 20.08L5.35 13.7L31.62 0.19ZM46.08 25.34L46.08 33.03L41.2 35.85L40.45 36.6L40.45 43.17L34.06 46.55L34.06 32.28L45.89 25.52ZM17.92 25.34L29.94 32.28L29.94 46.55L26.37 44.67L23.55 42.98L23.55 36.41L17.92 32.84L17.92 25.52ZM26.18 18.77L27.12 18.96L32 21.77L36.32 19.33L38.01 18.77L44.01 22.15L32 28.9L20.18 22.15L25.99 18.96Z"/>
+</svg><span>Ponoi</span></a>
+    <nav class="nav-wide" aria-label="Main">
+        <a href="/features/">Features</a>
+        <a href="/security/" aria-current="page">Security</a>
+        <a href="/plugins/">Plugins</a>
+        <a href="/trackoteka/">Trackoteka</a>
+        <a href="/download/">Download</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-quiet" href="https://ponoiai.github.io/ponoi/">Open Ponoi</a>
+      <a class="btn btn-solid" href="/download/">Download</a>
+    </div>
+    <details class="nav-mob">
+      <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span>Menu</summary>
+      <nav aria-label="Main">
+        <a href="/features/">Features</a>
+        <a href="/security/" aria-current="page">Security</a>
+        <a href="/plugins/">Plugins</a>
+        <a href="/trackoteka/">Trackoteka</a>
+        <a href="/download/">Download</a>
+        <a href="https://ponoiai.github.io/ponoi/">Open Ponoi</a>
+        <a href="https://ponoiai.github.io/ru/security/" hreflang="ru" lang="ru">Русский</a>
+      </nav>
+    </details>
+    <a class="lang-sw" href="https://ponoiai.github.io/ru/security/" hreflang="ru" lang="ru"
+       title="Language">Русский</a>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Security</p>
+    <h1>Ponoi Security</h1>
+    <p class="lede">This page describes what actually protects your data in Ponoi, and what does not. Where a protection is optional, off by default, or unproven, that is written here rather than left out.</p>
+    <p class="stamp">Last updated: August 12, 2026 · Ponoi 1.557.0</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <nav class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ul><li><a href="#philosophy">Security philosophy</a></li><li><a href="#messages">Message protection</a></li><li><a href="#transport">Transport security</a></li><li><a href="#account">Account security</a></li><li><a href="#password">Password storage</a></li><li><a href="#files">Attachments</a></li><li><a href="#calls">Voice and video</a></li><li><a href="#isolation">Plugin isolation</a></li><li><a href="#perms">Plugin permissions</a></li><li><a href="#net">Network permissions</a></li><li><a href="#meta">Metadata</a></li><li><a href="#infra">Infrastructure</a></li><li><a href="#threat">Threat model</a></li><li><a href="#limits">Known limitations</a></li><li><a href="#report">Reporting vulnerabilities</a></li></ul>
+  </nav>
+</section>
+
+<section class="wrap prose" id="philosophy">
+  <h2 class="mt0">Security philosophy</h2>
+  <p>Three rules the project holds itself to.</p>
+  <ul><li><b>No claim without code behind it.</b> Everything on this page corresponds to something in the public source. If a protection is not implemented, it is not described as if it were.</li>
+    <li><b>No silent downgrade.</b> When encryption cannot be applied, the message is not sent at all and you are told why. A protection that quietly turns itself off is worse than no protection, because people keep trusting it.</li>
+    <li><b>Name the limits.</b> An honest limitation is more useful than a confident slogan. The limitations section below is not an afterthought — it is the point of the page.</li></ul>
+</section>
+
+<section class="wrap prose" id="messages">
+  <h2>Message protection</h2>
+  <p>Direct messages between two people can be encrypted end to end. When it is on, the server stores ciphertext it has no key for.</p>
+</section>
+<div class="wrap">
+  <dl class="spec">
+    <div><dt>Key agreement</dt><dd>ECDH on the P-256 curve. X25519 would be preferable, but it is not available in the WebCrypto implementation the app must run on.</dd></div>
+    <div><dt>Key derivation</dt><dd>HKDF-SHA256, with the purpose and the pair of devices bound into the derivation, so a key from one context is useless in another.</dd></div>
+    <div><dt>Encryption</dt><dd>AES-256-GCM. GCM also authenticates: ciphertext altered on the server fails to decrypt rather than decrypting into something else.</dd></div>
+    <div><dt>Keys belong to devices</dt><dd>Each device has its own key pair. The private part is stored in IndexedDB as a CryptoKey and is never sent anywhere in the clear.</dd></div>
+    <div><dt>Length hiding</dt><dd>Message text is padded into fixed-size blocks before encryption, so ciphertext size no longer reveals whether you wrote “yes” or a page of text.</dd></div>
+    <div><dt>Verification</dt><dd>Each key has a fingerprint — five groups of five digits — that two people can read out to each other to confirm nobody is in the middle.</dd></div>
+    <div><dt>Multiple recipients</dt><dd>A per-message content key is wrapped separately for the other person’s devices and for your own, so your own second device can read your history.</dd></div>
+  </dl>
+</div>
+<section class="wrap prose">
+  <div class="note note-key"><p><b>This is a setting, and it is off until you turn it on</b> (Settings → Privacy). It applies to one-to-one direct messages only.</p></div>
+  <p>Not end-to-end encrypted: group conversations and server channels. Those messages are stored so that the server can read them, and are protected by database access rules — the same model as most group chat products. If you need a conversation the server cannot read, use a one-to-one direct message with encryption on.</p>
+  <p>If your correspondent has no published key — for example they have never opened a version that supports encryption — the message is <b>not sent</b>, and the app says so. It never falls back to plaintext behind your back.</p>
+</section>
+
+<section class="wrap prose" id="transport">
+  <h2>Transport security</h2>
+  <p>All traffic between the app and its backend goes over HTTPS/TLS, including the realtime connection (secure WebSocket) and file uploads. Plugins may only reach the network over <code>https:</code> and <code>wss:</code>; plain HTTP is refused.</p>
+  <p>The Windows app is downloaded over HTTPS and updates itself over HTTPS, checking the SHA-512 checksum published with the release. That checksum proves the file arrived intact — it is not a code-signing signature, and the installer is not code-signed.</p>
+</section>
+
+<section class="wrap prose" id="account">
+  <h2>Account security</h2>
+  <p>Accounts are handled by Supabase Auth. Sessions are JWT-based with refresh tokens, stored locally on your device (and additionally in native storage on Android so that an app update does not log you out).</p>
+  <ul><li><b>Trusted devices.</b> Signing in from an unknown device marks it as new, and it stays limited until you confirm it. Your other devices are notified.</li>
+    <li><b>Recovery code.</b> Stored on the server only as a SHA-256 hash, never in readable form — a database leak does not hand out master keys to accounts.</li>
+    <li><b>QR sign-in.</b> You can log in on a new device by scanning a code with one that is already signed in.</li>
+    <li><b>Username or email.</b> Login by username goes through a dedicated endpoint that answers identically for “no such user” and “wrong password”, so it cannot be used to discover who exists.</li>
+    <li><b>Account deletion.</b> You can delete your account and its data from inside the app.</li></ul>
+  <p>There is no two-factor authentication with an authenticator app yet. Trusted devices and the recovery code are a partial substitute, not a replacement.</p>
+</section>
+
+<section class="wrap prose" id="password">
+  <h2>Password storage</h2>
+  <p>Ponoi does not store passwords. They are handled by Supabase Auth, which stores them as bcrypt hashes; the project writes no password storage code of its own.</p>
+  <p>The minimum password length is six characters, which is the platform default. That is short, and raising it is on the list of things to fix.</p>
+  <div class="note note-warn"><p><b>One consequence worth understanding.</b> Your encryption key can be backed up to the server, locked with your account password (PBKDF2-SHA256, 250 000 iterations, AES-256-GCM). This exists so that logging out does not destroy your message history. The cost: the same password is also what you type into the login form, so a malicious or compromised authentication server could capture it and unlock that backup. Ponoi protects your messages from outsiders and from a database leak; it does not protect them from whoever controls the server itself.</p></div>
+</section>
+
+<section class="wrap prose" id="files">
+  <h2>Attachments</h2>
+  <div class="note note-warn"><p><b>Attachments are the weakest part of Ponoi today, and it is being fixed.</b> Files you send are uploaded to cloud storage that is configured as public: anyone who has, or can construct, the link to a file can download it without logging in. Access rules protect the database, not this storage bucket.</p></div>
+  <p>There is a switch that fixes this for direct messages: <b>encrypt attachments</b>. With it on, each file is encrypted in your browser with its own AES-256-GCM key before upload, stored under a neutral name with no file type, and the key travels inside the encrypted message — so it can only be obtained by decrypting the conversation. Like the other encryption switches, it is off by default.</p>
+  <p>Until the storage layer is closed, treat anything you send without attachment encryption as a file that is technically public. This limitation is listed below and in the project’s own audit.</p>
+</section>
+
+<section class="wrap prose" id="calls">
+  <h2>Voice and video</h2>
+  <p>Calls run over LiveKit. Permission to call someone is decided on the server, not in the app: blocking and your “who can call me” setting are enforced by the service that issues the call token, so the check cannot be bypassed by a modified client.</p>
+  <p>Calls between two people can be end-to-end encrypted, as a separate setting. The key is generated in your browser and delivered to the other person inside an encrypted message, so the call server never sees it.</p>
+  <div class="note note-warn"><p><b>Marked experimental.</b> The encryption path is covered by tests in code, but it has never been verified in a real call between two devices. Until it has, it is not presented as proven. If the key cannot be delivered, the call proceeds unencrypted and says so on screen.</p></div>
+  <p>Without call encryption, media is decrypted at the media server, as in any ordinary group call. Server voice channels are not end-to-end encrypted.</p>
+</section>
+
+<section class="wrap prose" id="isolation">
+  <h2>Plugin isolation</h2>
+  <p>Plugin code does not run in the app. It runs in a Web Worker, which the browser gives no DOM, no cookies and no access to the page — so a plugin cannot read your session, cannot draw a fake login window, and cannot reach into the interface.</p>
+  <p>Plugins that provide a full page (for games, visualisers, 3D scenes) get an <code>&lt;iframe sandbox="allow-scripts"&gt;</code> <b>without</b> <code>allow-same-origin</code>. That gives the page a unique opaque origin: it has its own DOM and can use WebGL, WebAssembly and audio, but it is a different origin from Ponoi and can touch neither the app’s document nor its storage.</p>
+  <p>These are browser boundaries, not checks in our code that a clever plugin could talk its way around. Everything a plugin can do arrives through one dispatcher, and every call is checked against the permissions the plugin declared. There is a dedicated test suite that attacks these boundaries deliberately.</p>
+</section>
+
+<section class="wrap prose" id="perms">
+  <h2>Plugin permissions</h2>
+  <p>Before installing anything, you see the plugin’s name, author, version and the exact list of what it is asking for, in plain language — for example “Send messages on your behalf” or “Reach the internet (only the listed sites)”. There are 23 such permissions.</p>
+  <p><b>Two things to know.</b> A plugin that declares <code>*</code> — or that declares nothing at all — asks for every permission, and the install screen shows this in red. And there are no quantitative limits: an installed plugin may send messages, make requests and run in the background as much as it likes. The app states this before you install, because the meaningful protection here is your decision, not a quota.</p>
+  <p>A plugin can be switched off or removed at any time.</p>
+</section>
+
+<section class="wrap prose" id="net">
+  <h2>Network permissions</h2>
+  <p>A plugin can only reach the internet if it has the network permission, and only the domains it declared in its header. The rules are enforced in one place for every way out — ordinary requests, streaming responses and persistent connections — so a second code path cannot drift out of sync with the first:</p>
+  <ul><li>Only <code>https:</code> and <code>wss:</code>; plain HTTP is refused</li>
+    <li>Only the declared domains, or every domain if the plugin asked for that openly and you accepted it</li>
+    <li>Never to Ponoi itself or to its backend — a plugin cannot use your session against the app</li>
+    <li>Headers from an allowlist only; <code>Cookie</code> is never allowed</li></ul>
+</section>
+
+<section class="wrap prose" id="meta">
+  <h2>Metadata</h2>
+  <p>Encryption hides what you wrote. It does not hide that you wrote. Even with everything switched on, the server knows:</p>
+  <ul><li>Which accounts exist, their usernames, avatars and profile fields</li>
+    <li>Who is in a conversation with whom, and when messages were sent</li>
+    <li>Which servers and channels you belong to</li>
+    <li>That a call took place, between whom and for how long</li>
+    <li>Approximate connection times, and the IP address your device connects from — as with any online service</li></ul>
+  <p>Message length is hidden by padding, and encrypted attachments carry no file name or type. The rest of the list above is metadata that Ponoi does not currently minimise.</p>
+</section>
+
+<section class="wrap prose" id="infra">
+  <h2>Infrastructure</h2>
+  <p>Ponoi is not self-hosted infrastructure. It runs on:</p>
+  <ul><li><b>Supabase.</b> Database, accounts, file storage and the realtime connection. Access is governed by row-level security rules, which are tested against a real Postgres on every change.</li>
+    <li><b>LiveKit.</b> Voice, video and screen sharing. Handles media only.</li>
+    <li><b>GitHub.</b> Source code, automated builds and the release files this site links to.</li></ul>
+  <p>The <a href="/privacy/">privacy page</a> lists every third-party service the app talks to, including the ones that only see an IP address.</p>
+</section>
+
+<section class="band band-alt" id="threat">
+  <div class="wrap">
+    <h2 class="mt0">Threat model</h2>
+    <div class="grid g2">
+      <article class="card">
+        <h3>What Ponoi protects against</h3>
+        <ul><li>Someone else reading your one-to-one messages, with encryption on — including the operator of the database</li>
+    <li>Another user reading data that is not theirs: access rules are enforced in the database, not in the app</li>
+    <li>A malicious plugin stealing your session, faking the interface or calling home to an undeclared server</li>
+    <li>Passive collection: there is no analytics, no crash reporting and no advertising code to leak anything</li>
+    <li>Someone with your database dump reading your recovery code, or your key backup without your password</li></ul>
+      </article>
+      <article class="card">
+        <h3>What Ponoi does not protect against</h3>
+        <ul><li>A malicious operator of the authentication server, who could capture your password as you log in and unlock your key backup</li>
+    <li>Anyone reading group conversations or server channels at the database — those are not end-to-end encrypted</li>
+    <li>Anyone downloading unencrypted attachments, which are in public storage today</li>
+    <li>A compromised device: malware or someone with your unlocked computer sees what you see</li>
+    <li>Traffic analysis: who talks to whom and when is visible to the server</li>
+    <li>A photograph of your screen taken with another camera, whatever the capture protection setting says</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="wrap prose" id="limits">
+  <h2>Known limitations</h2>
+  <p>The list the project keeps of its own weak spots, in the order it intends to fix them:</p>
+  <ol><li><b>Attachments are in public storage.</b> Files sent without attachment encryption can be downloaded by anyone with the link. The fix — closing the bucket and moving to signed links without breaking the millions of links already inside old messages — is planned in stages.</li>
+    <li><b>Encryption is off by default.</b> Privacy that only applies when found in the settings is privacy most people never get.</li>
+    <li><b>Group and channel messages are not end-to-end encrypted.</b> Group end-to-end encryption is a separate, larger design task and is not going to be improvised.</li>
+    <li><b>Call encryption is unverified in the field.</b> It works in tests; it has not been proven in a real call.</li>
+    <li><b>No Content-Security-Policy.</b> There is no known injection path today — messages are rendered as React nodes and there is no raw HTML insertion anywhere in the app — but CSP is the second line that catches tomorrow’s mistake.</li>
+    <li><b>Emoji images load from a public CDN.</b> That means a third party sees your IP address simply because the interface contains emoji. Bundling them is straightforward and planned.</li>
+    <li><b>Password minimum is six characters.</b> Too short.</li>
+    <li><b>No external security audit.</b> Nobody outside the project has reviewed any of this.</li></ol>
+  <p>A full technical write-up of the same findings, with file references, is published in the repository as <code>SECURITY_ARCHITECTURE_AUDIT.md</code>. <a href="https://github.com/ponoiai/ponoi/blob/main/SECURITY_ARCHITECTURE_AUDIT.md" rel="noopener">Open the audit →</a></p>
+</section>
+
+<section class="wrap prose" id="report">
+  <h2>Reporting vulnerabilities</h2>
+  <p>If you find a vulnerability, please report it privately first, and give it a chance to be fixed before it is public. That protects the people using Ponoi, not the project’s reputation.</p>
+  <ul><li>Use GitHub’s private vulnerability reporting on the repository, or open a minimal issue asking for a private channel — without the details.</li>
+    <li>Include what you did, what happened, and why you believe it is a problem. A short reproduction is worth more than a long description.</li>
+    <li>Please do not post working exploits, other people’s data or a public write-up before a fix exists.</li></ul>
+  <p>There is no bug bounty. The project has no money to pay one, and promising one it cannot honour would be worse than saying this plainly.</p>
+  <p><a href="https://github.com/ponoiai/ponoi/blob/main/SECURITY.md" rel="noopener">Reporting policy in the repository →</a>
+     &nbsp;·&nbsp; <a href="/privacy/">Privacy page →</a></p>
+</section>
+
+</main>
+<footer class="site-foot">
+      <div class="wrap">
+        <div class="f-brand">
+          <span class="f-logo"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path fill="currentColor" fill-rule="evenodd" d="M3.1 17.08L14.36 23.46L14.55 30.97L10.23 28.53L9.1 27.96L8.91 28.15L8.91 45.42L23.37 53.68L23.55 47.11L29.94 50.67L29.75 64L3.1 48.8L3.1 17.27ZM60.72 17.08L60.9 48.8L34.06 64L34.06 50.67L40.45 47.11L40.45 53.49L40.82 53.68L55.27 45.23L55.27 28.15L55.09 27.96L49.64 30.97L49.64 23.46L60.53 17.27ZM31.81 0L39.32 3.57L58.84 13.7L47.39 20.08L41.38 16.7L46.26 14.08L46.45 13.89L46.08 13.51L32 6.38L18.3 13.33L17.74 13.89L17.92 14.08L22.8 16.7L16.42 20.08L5.35 13.7L31.62 0.19ZM46.08 25.34L46.08 33.03L41.2 35.85L40.45 36.6L40.45 43.17L34.06 46.55L34.06 32.28L45.89 25.52ZM17.92 25.34L29.94 32.28L29.94 46.55L26.37 44.67L23.55 42.98L23.55 36.41L17.92 32.84L17.92 25.52ZM26.18 18.77L27.12 18.96L32 21.77L36.32 19.33L38.01 18.77L44.01 22.15L32 28.9L20.18 22.15L25.99 18.96Z"/>
+</svg><b>Ponoi</b></span>
+          <p>Ponoi is an independent project. This site is the official source of information about it.</p>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">Product</h2>
+          <ul>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/download/">Download</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/trackoteka/">Trackoteka</a></li>
+            <li><a href="/changelog/">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">Trust</h2>
+          <ul>
+            <li><a href="/security/">Security</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/transparency/">Transparency</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">About</h2>
+          <ul>
+            <li><a href="/about/">What is Ponoi?</a></li>
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="/press/">Press kit</a></li>
+            <li><a href="https://github.com/ponoiai/ponoi" rel="noopener">Source code</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

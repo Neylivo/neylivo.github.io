@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Прозрачность Ponoi — что у нас пока плохо</title>
+<meta name="description" content="Честный список того, что в Ponoi (Поное) пока сделано плохо: незашифрованные вложения, шифрование выключено по умолчанию, непроверенные возможности и отсутствие внешнего аудита.">
+<link rel="canonical" href="https://ponoiai.github.io/ru/transparency/">
+<link rel="alternate" hreflang="en" href="https://ponoiai.github.io/transparency/">
+  <link rel="alternate" hreflang="ru" href="https://ponoiai.github.io/ru/transparency/">
+<link rel="alternate" hreflang="x-default" href="https://ponoiai.github.io/transparency/">
+<meta property="og:site_name" content="Ponoi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Прозрачность Ponoi — что у нас пока плохо">
+<meta property="og:description" content="Честный список того, что в Ponoi (Поное) пока сделано плохо: незашифрованные вложения, шифрование выключено по умолчанию, непроверенные возможности и отсутствие внешнего аудита.">
+<meta property="og:url" content="https://ponoiai.github.io/ru/transparency/">
+<meta property="og:image" content="https://ponoiai.github.io/assets/ponoi-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Прозрачность Ponoi — что у нас пока плохо">
+<meta name="twitter:description" content="Честный список того, что в Ponoi (Поное) пока сделано плохо: незашифрованные вложения, шифрование выключено по умолчанию, непроверенные возможности и отсутствие внешнего аудита.">
+<meta name="twitter:image" content="https://ponoiai.github.io/assets/ponoi-og.png">
+<meta name="theme-color" content="#0e1012" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" href="../../assets/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/icon.png">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="stylesheet" href="../../assets/site.css">
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/ru/"><svg class="mark" width="26" height="26" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path fill="currentColor" fill-rule="evenodd" d="M3.1 17.08L14.36 23.46L14.55 30.97L10.23 28.53L9.1 27.96L8.91 28.15L8.91 45.42L23.37 53.68L23.55 47.11L29.94 50.67L29.75 64L3.1 48.8L3.1 17.27ZM60.72 17.08L60.9 48.8L34.06 64L34.06 50.67L40.45 47.11L40.45 53.49L40.82 53.68L55.27 45.23L55.27 28.15L55.09 27.96L49.64 30.97L49.64 23.46L60.53 17.27ZM31.81 0L39.32 3.57L58.84 13.7L47.39 20.08L41.38 16.7L46.26 14.08L46.45 13.89L46.08 13.51L32 6.38L18.3 13.33L17.74 13.89L17.92 14.08L22.8 16.7L16.42 20.08L5.35 13.7L31.62 0.19ZM46.08 25.34L46.08 33.03L41.2 35.85L40.45 36.6L40.45 43.17L34.06 46.55L34.06 32.28L45.89 25.52ZM17.92 25.34L29.94 32.28L29.94 46.55L26.37 44.67L23.55 42.98L23.55 36.41L17.92 32.84L17.92 25.52ZM26.18 18.77L27.12 18.96L32 21.77L36.32 19.33L38.01 18.77L44.01 22.15L32 28.9L20.18 22.15L25.99 18.96Z"/>
+</svg><span>Ponoi</span></a>
+    <nav class="nav-wide" aria-label="Основная навигация">
+        <a href="/ru/features/">Возможности</a>
+        <a href="/ru/security/">Безопасность</a>
+        <a href="/ru/plugins/">Плагины</a>
+        <a href="/ru/trackoteka/">Трекотека</a>
+        <a href="/ru/download/">Скачать</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn-quiet" href="https://ponoiai.github.io/ponoi/">Открыть Ponoi</a>
+      <a class="btn btn-solid" href="/ru/download/">Скачать</a>
+    </div>
+    <details class="nav-mob">
+      <summary aria-label="Меню"><span class="bars" aria-hidden="true"></span>Меню</summary>
+      <nav aria-label="Основная навигация">
+        <a href="/ru/features/">Возможности</a>
+        <a href="/ru/security/">Безопасность</a>
+        <a href="/ru/plugins/">Плагины</a>
+        <a href="/ru/trackoteka/">Трекотека</a>
+        <a href="/ru/download/">Скачать</a>
+        <a href="https://ponoiai.github.io/ponoi/">Открыть Ponoi</a>
+        <a href="https://ponoiai.github.io/transparency/" hreflang="en" lang="en">English</a>
+      </nav>
+    </details>
+    <a class="lang-sw" href="https://ponoiai.github.io/transparency/" hreflang="en" lang="en"
+       title="Язык">English</a>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Прозрачность</p>
+    <h1>Прозрачность</h1>
+    <p class="lede">Страницы о продукте пишут, чтобы впечатлить. Эта написана, чтобы её можно было проверить. Всё, что ниже, — настоящие слабые места Ponoi, перечисленные самим проектом.</p>
+    <p class="stamp">Обновлено: 12 августа 2026 · Ponoi 1.557.0</p>
+  </div>
+</section>
+
+<section class="wrap prose">
+  <h2 class="mt0">Зачем эта страница</h2>
+  <p>Продукт о приватности, который прячет свои пределы, просит доверия больше, чем заслуживает. Люди принимают решения по тому, что написано на такой странице: отправлять ли документ, вести ли разговор. Если мы ошибёмся в свою пользу, платить за это будет кто-то другой.</p>
+  <p>Поэтому здесь — всё то, чего мы предпочли бы не писать.</p>
+</section>
+
+<section class="wrap">
+  <h2>Незакрытые слабые места</h2>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr>
+        <th scope="col">Слабое место</th>
+        <th scope="col">Что это значит</th>
+        <th scope="col">Состояние</th>
+      </tr></thead>
+      <tbody>
+        <tr><th scope="row">Вложения лежат в публичном хранилище</th><td>Файлы, отправленные без шифрования вложений, скачает любой, у кого есть ссылка, — без входа. Базу защищают правила доступа, это хранилище — нет. Включённое в настройках шифрование вложений закрывает это для вашей личной переписки уже сегодня. Правильное исправление — закрыть хранилище и перейти на подписанные ссылки, не сломав те, что уже лежат внутри старых сообщений, — идёт по шагам, и первый, безобидный шаг это запретить перечисление содержимого вовсе.</td><td class="nowrap">Исправляется</td></tr>
+        <tr><th scope="row">Шифрование выключено по умолчанию</th><td>Сквозное шифрование сообщений, вложений и звонков есть, работает и описано — и все три переключателя начинают выключенными. Приватность, которая достаётся только тем, кто пошёл искать её в настройках, — это приватность, которой большинство не получает.</td><td class="nowrap">Открыто</td></tr>
+        <tr><th scope="row">Групповые беседы и каналы не защищены сквозным шифрованием</th><td>Защищена только переписка один на один. Групповое шифрование — совсем другая и куда большая задача: раздача ключей, приход и уход участников, несколько устройств. Её сначала спроектируют как следует и только потом напишут, а не придумают на ходу.</td><td class="nowrap">Проектируется</td></tr>
+        <tr><th scope="row">Шифрование звонков ни разу не проверено настоящим звонком</th><td>Путь в коде покрыт проверками, а вызовы библиотеки сверены с её собственными исходниками. Но никто ещё не позвонил с шифрованием между двумя настоящими устройствами и не убедился. Пока этого не произошло, оно помечено экспериментальным везде, где упоминается.</td><td class="nowrap">Не проверено</td></tr>
+        <tr><th scope="row">Нет Content-Security-Policy</th><td>Известного способа внедрить код в приложение сегодня нет: сообщения рисуются узлами React, вставки сырого HTML нет нигде. CSP — второй рубеж, который ловит ошибку, которую ещё никто не сделал. Включать его надо осторожно: страницы плагинов, встроенные проигрыватели и эмодзи грузятся из разных мест.</td><td class="nowrap">Открыто</td></tr>
+        <tr><th scope="row">Картинки эмодзи приходят с чужого CDN</th><td>В интерфейсе есть эмодзи, поэтому посторонний получает ваш IP при каждом запуске без единого вашего действия. Со шрифтами приложение этого избежало намеренно — они лежат в сборке; эмодзи должны лежать там же.</td><td class="nowrap">Открыто</td></tr>
+        <tr><th scope="row">Минимальная длина пароля — шесть символов</th><td>Это значение платформы по умолчанию, и оно мало.</td><td class="nowrap">Открыто</td></tr>
+        <tr><th scope="row">Нет двухфакторной проверки</th><td>Доверенные устройства и код восстановления есть и помогают, но это не то же самое, что приложение-аутентификатор.</td><td class="nowrap">Открыто</td></tr>
+        <tr><th scope="row">Внешнего аудита не было</th><td>Никто со стороны всё это не проверял. Всё на странице безопасности — наше собственное прочтение собственного кода. Именно поэтому код открыт.</td><td class="nowrap">Открыто</td></tr>
+        <tr><th scope="row">Нет лицензии открытого кода</th><td>Исходник открыт и читается, но лицензии на нём нет — то есть формально это «исходник доступен», а не «открытый код». Это незавершённое решение, а не позиция.</td><td class="nowrap">Открыто</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap prose">
+    <h2 class="mt0">Выпущено, но не проверено в живой работе</h2>
+    <p>Кое-что выпущено, выглядит работающим и ни разу не подтверждено двумя людьми, которые пользуются этим одновременно. Как готовое оно не подаётся:</p>
+    <ul><li>Звонки со сквозным шифрованием — для проверки нужны два человека и живой медиасервер.</li><li>Установщик обновлений на Android — нативный код сверен построчно с исходниками платформы, но ни разу не проходил настоящее обновление на настоящем телефоне.</li><li>Часть путей уведомлений, для проверки которых нужен второй человек и закрытое окно.</li></ul>
+    <p>Там, где приложение само знает, что что-то не проверено, оно говорит это в настройке, а не в сноске.</p>
+  </div>
+</section>
+
+<section class="wrap prose">
+  <h2>Что уже закрыто</h2>
+  <p>Часть прежних проблем закрыта, и об этом честно сказать тоже стоит: правила доступа к базе не раз ужесточались и теперь проверяются на настоящем Postgres при каждом изменении; пуш-уведомления когда-то позволяли любому вошедшему прислать кому угодно поддельное системное уведомление — больше нет; личная коллекция гифок была видна всем, теперь она личная; длина сообщения больше не видна по размеру шифротекста.</p>
+
+  <h2>Как всё это проверить</h2>
+  <p>Всё перечисленное указывает на код, который можно прочитать. Репозиторий открыт, технический аудит со ссылками на файлы опубликован в нём, а у правил доступа к базе есть набор проверок, который играет за нескольких пользователей против настоящей базы.</p>
+  <div class="cta-row">
+    <a class="btn btn-quiet" href="https://github.com/ponoiai/ponoi/blob/main/SECURITY_ARCHITECTURE_AUDIT.md" rel="noopener">Читать аудит безопасности</a>
+    <a class="btn btn-quiet" href="https://github.com/ponoiai/ponoi" rel="noopener">Открыть репозиторий</a>
+  </div>
+  <p style="margin-top:20px"><a href="/ru/security/">Страница безопасности →</a></p>
+</section>
+
+</main>
+<footer class="site-foot">
+      <div class="wrap">
+        <div class="f-brand">
+          <span class="f-logo"><svg class="mark" width="24" height="24" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <path fill="currentColor" fill-rule="evenodd" d="M3.1 17.08L14.36 23.46L14.55 30.97L10.23 28.53L9.1 27.96L8.91 28.15L8.91 45.42L23.37 53.68L23.55 47.11L29.94 50.67L29.75 64L3.1 48.8L3.1 17.27ZM60.72 17.08L60.9 48.8L34.06 64L34.06 50.67L40.45 47.11L40.45 53.49L40.82 53.68L55.27 45.23L55.27 28.15L55.09 27.96L49.64 30.97L49.64 23.46L60.53 17.27ZM31.81 0L39.32 3.57L58.84 13.7L47.39 20.08L41.38 16.7L46.26 14.08L46.45 13.89L46.08 13.51L32 6.38L18.3 13.33L17.74 13.89L17.92 14.08L22.8 16.7L16.42 20.08L5.35 13.7L31.62 0.19ZM46.08 25.34L46.08 33.03L41.2 35.85L40.45 36.6L40.45 43.17L34.06 46.55L34.06 32.28L45.89 25.52ZM17.92 25.34L29.94 32.28L29.94 46.55L26.37 44.67L23.55 42.98L23.55 36.41L17.92 32.84L17.92 25.52ZM26.18 18.77L27.12 18.96L32 21.77L36.32 19.33L38.01 18.77L44.01 22.15L32 28.9L20.18 22.15L25.99 18.96Z"/>
+</svg><b>Ponoi</b></span>
+          <p>Ponoi — независимый проект. Этот сайт — официальный источник сведений о нём.</p>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">Продукт</h2>
+          <ul>
+            <li><a href="/ru/features/">Возможности</a></li>
+            <li><a href="/ru/download/">Скачать</a></li>
+            <li><a href="/ru/plugins/">Плагины</a></li>
+            <li><a href="/ru/trackoteka/">Трекотека</a></li>
+            <li><a href="/ru/changelog/">Что нового</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">Доверие</h2>
+          <ul>
+            <li><a href="/ru/security/">Безопасность</a></li>
+            <li><a href="/ru/privacy/">Приватность</a></li>
+            <li><a href="/ru/transparency/">Прозрачность</a></li>
+            <li><a href="/ru/faq/">Вопросы и ответы</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h2 class="f-h">О проекте</h2>
+          <ul>
+            <li><a href="/ru/about/">Что такое Поной?</a></li>
+            <li><a href="/ru/docs/">Документация</a></li>
+            <li><a href="/ru/press/">Для прессы</a></li>
+            <li><a href="https://github.com/ponoiai/ponoi" rel="noopener">Исходный код</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
