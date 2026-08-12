@@ -102,8 +102,8 @@ async function main() {
     start_url: '/',
     scope: '/',
     display: 'browser',
-    background_color: '#14140f',
-    theme_color: '#14140f',
+    background_color: '#0e1012',
+    theme_color: '#0e1012',
     icons: [
       { src: '/assets/icon.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
       { src: '/assets/mark.svg', sizes: 'any', type: 'image/svg+xml' },

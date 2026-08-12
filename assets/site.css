@@ -4,50 +4,54 @@
  * чужого сервера означал бы, что каждый посетитель страницы о приватности
  * первым делом сообщает свой адрес постороннему. Шрифты — системные.
  *
- * Палитра тёплая, не «дискордовская»: приложение косплеит Discord намеренно,
- * сайту это не нужно и вредно — он должен выглядеть собой.
+ * Палитра бело-серая, без цветного акцента (12.08.2026, по просьбе владельца).
+ * Приложение косплеит Discord намеренно; сайту это не нужно и вредно — он должен
+ * выглядеть собой. Цвет здесь остался ровно там, где он что-то ЗНАЧИТ: зелёное
+ * «работает» и жёлтое «задумано, но ещё нет» (--ok/--warn). Всё остальное —
+ * бумага, чернила и линейки. Акцент (ссылки, сплошная кнопка) — графит на
+ * светлой теме и почти белый на тёмной.
  */
 
 :root {
   color-scheme: light dark;
 
-  --paper: #f7f4ec;
-  --paper-2: #efebe0;
-  --card: #fffdf8;
-  --ink: #16171a;
-  --ink-2: #3d3f45;
-  --mut: #666a72;
-  --rule: #ddd7c8;
-  --rule-2: #c9c2b0;
-  --accent: #a6461a;
-  --accent-2: #8c3a15;
-  --accent-soft: #f2e3d8;
-  --ok: #2f6a4a;
-  --warn: #8a5a11;
+  --paper: #ffffff;
+  --paper-2: #f4f5f7;
+  --card: #ffffff;
+  --ink: #101214;
+  --ink-2: #34383d;
+  --mut: #676c73;
+  --rule: #e4e6e9;
+  --rule-2: #cbcfd4;
+  --accent: #1f2226;
+  --accent-2: #000000;
+  --accent-soft: #eef0f2;
+  --ok: #2c6b4f;
+  --warn: #7d5a12;
 
   --wrap: 1120px;
   --col: 68ch;
   --r: 10px;
-  --shadow: 0 1px 0 var(--rule), 0 12px 28px -24px rgba(20, 18, 10, .55);
+  --shadow: 0 1px 0 var(--rule), 0 12px 28px -24px rgba(10, 14, 20, .5);
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Mono", Menlo, Consolas, monospace;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #14140f;
-    --paper-2: #1a1a15;
-    --card: #1c1d18;
-    --ink: #ece8dd;
-    --ink-2: #c8c4b8;
-    --mut: #999588;
-    --rule: #2e2f27;
-    --rule-2: #3d3e35;
-    --accent: #e8945e;
-    --accent-2: #f2ad80;
-    --accent-soft: #2b2119;
-    --ok: #77c39b;
-    --warn: #d9a557;
+    --paper: #0e1012;
+    --paper-2: #15181a;
+    --card: #191c1f;
+    --ink: #f1f3f5;
+    --ink-2: #ced3d8;
+    --mut: #949aa1;
+    --rule: #292d31;
+    --rule-2: #3a3f45;
+    --accent: #e9edf1;
+    --accent-2: #ffffff;
+    --accent-soft: #1f2327;
+    --ok: #7cc79f;
+    --warn: #d3b166;
     --shadow: 0 1px 0 var(--rule), 0 12px 28px -24px #000;
   }
 }
@@ -169,8 +173,8 @@ a:hover { color: var(--accent-2); }
 .btn .sub { font-weight: 400; opacity: .85; font-size: 13px; }
 
 @media (prefers-color-scheme: dark) {
-  .btn-solid { color: #17130e; }
-  .btn-solid:hover { color: #17130e; }
+  .btn-solid { color: #0e1012; }
+  .btn-solid:hover { color: #0e1012; }
 }
 
 /* ── Типографика страниц ──────────────────────────────────────────────── */
