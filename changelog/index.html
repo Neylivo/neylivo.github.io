@@ -73,7 +73,7 @@
     <p class="eyebrow">Changelog</p>
     <h1>Changelog</h1>
     <p class="lede">Every version of NeyLivo and what changed in it. The list is generated from the project’s own history, so it matches what the app shows in its “What’s new” window.</p>
-    <p class="stamp">Current version: 1.559.0</p>
+    <p class="stamp">Current version: 1.561.0</p>
   </div>
 </section>
 
@@ -86,6 +86,29 @@
     <p class="muted">Showing the most recent versions.</p>
   </div>
   
+    <article class="prose" style="margin-bottom:34px">
+      <h2 id="v1.561.0" style="margin-top:1.4em">NeyLivo 1.561.0
+        <span class="muted" style="font-size:15px;font-weight:400;font-family:var(--mono)">2026-08-13</span></h2>
+      <ul>
+        <li><b>Исправлено:</b> экран «Не удалось загрузить этот раздел» появлялся после выхода новой версии, потому что файлов со старыми именами больше нет — теперь приложение один раз повторяет загрузку, а потом само перезагружает страницу с новым содержимым, и человек этого экрана не видит</li>
+        <li><b>Убрано:</b> приветствие в консоли при каждом запуске — отладочный вывод в готовом приложении</li>
+        <li><b>Добавлено:</b> в проверку кривостей вошли контекстные меню у самого края окна, настройки в маленьком окне и лишняя прокрутка вбок, а каждый шаг теперь подтверждает, что экран действительно открылся — иначе «чисто» означало бы, что разбирать было нечего</li>
+        <li><b>Исправлено:</b> переменная высоты полосы заголовка объявлена в теме — без этого её не видела проверка тем</li>
+      </ul>
+    </article>
+
+    <article class="prose" style="margin-bottom:34px">
+      <h2 id="v1.560.0" style="margin-top:1.4em">NeyLivo 1.560.0
+        <span class="muted" style="font-size:15px;font-weight:400;font-family:var(--mono)">2026-08-13</span></h2>
+      <ul>
+        <li><b>Исправлено:</b> значок окна, панели задач, трея и установщика остался старым — build/icon.ico лежит отдельно от остальных значков и менялся отдельно, а теперь собирается той же командой, что и все прочие, в семи размерах</li>
+        <li><b>Исправлено:</b> верхний ряд просмотра картинки ложился ровно на кнопки заголовка окна, два крестика рядом и оба наполовину — просмотр больше не накрывает полосу заголовка</li>
+        <li><b>Добавлено:</b> проверка на кривости вёрстки, npm run test:crooked ищет наложения кнопок, вылеты за окно, обрезанные без многоточия подписи и наложения на полосу заголовка, на настоящем приложении и на шести экранах</li>
+        <li><b>Добавлено:</b> стенд умеет поднимать весь каркас приложения с настоящей полосой заголовка, а не только основной экран</li>
+        <li><b>Изменено:</b> проба отсеивает задуманное — уехавший за край список каналов на телефоне и прокрученные списки больше не считаются кривостями</li>
+      </ul>
+    </article>
+
     <article class="prose" style="margin-bottom:34px">
       <h2 id="v1.559.0" style="margin-top:1.4em">NeyLivo 1.559.0
         <span class="muted" style="font-size:15px;font-weight:400;font-family:var(--mono)">2026-08-12</span></h2>
@@ -593,23 +616,6 @@
         <li><b>Изменено:</b> значок сервера снова скругляется из квадрата в круг, строки каналов и диалогов снова сдвигаются — это и было заметной живостью рейки</li>
         <li><b>Добавлено:</b> проверка test:anim — страница поднимается дважды, со старыми стилями и с новым слоем, и у каждого образца сравнивается, что двигалось раньше и что двигается теперь</li>
         <li><b>Добавлено:</b> 4 проверки перехода за перенаправлением Steam, включая слом на «пошли по голому адресу»</li>
-      </ul>
-    </article>
-
-    <article class="prose" style="margin-bottom:34px">
-      <h2 id="v1.524.0" style="margin-top:1.4em">NeyLivo 1.524.0
-        <span class="muted" style="font-size:15px;font-weight:400;font-family:var(--mono)">2026-08-10</span></h2>
-      <ul>
-        <li><b>Изменено:</b> восстановлены исходные анимации, стабильная компоновка и единый визуальный слой Ponoi</li>
-        <li><b>Исправлено:</b> мобильная навигация и touch-размеры</li>
-      </ul>
-    </article>
-
-    <article class="prose" style="margin-bottom:34px">
-      <h2 id="v1.523.0" style="margin-top:1.4em">NeyLivo 1.523.0
-        <span class="muted" style="font-size:15px;font-weight:400;font-family:var(--mono)">2026-08-10</span></h2>
-      <ul>
-        <li><b>Изменено:</b> единая система интерфейса</li>
       </ul>
     </article>
 </section>
