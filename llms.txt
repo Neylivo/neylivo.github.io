@@ -16,7 +16,7 @@ FAQ: https://neylivo.github.io/faq/
 Transparency: https://neylivo.github.io/transparency/
 Press kit: https://neylivo.github.io/press/
 Source code: https://github.com/Neylivo/neylivo
-Current version: 1.561.0
+Current version: 1.562.0
 
 ## Naming
 
