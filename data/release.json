@@ -1,15 +1,15 @@
 {
-  "version": "1.562.0",
-  "published": "2026-08-13T10:02:56Z",
+  "version": "1.562.1",
+  "published": "2026-08-13T10:14:47Z",
   "windows": {
-    "name": "NeyLivo-Setup-1.562.0.exe",
-    "url": "https://github.com/Neylivo/neylivo/releases/download/v1.562.0/NeyLivo-Setup-1.562.0.exe",
-    "bytes": 199944519
+    "name": "NeyLivo-Setup-1.562.1.exe",
+    "url": "https://github.com/Neylivo/neylivo/releases/download/v1.562.1/NeyLivo-Setup-1.562.1.exe",
+    "bytes": 199942966
   },
   "android": {
-    "name": "NeyLivo-Setup-1.562.0.apk",
-    "url": "https://github.com/Neylivo/neylivo/releases/download/v1.562.0/NeyLivo-Setup-1.562.0.apk",
-    "bytes": 18258624
+    "name": "NeyLivo-Setup-1.562.1.apk",
+    "url": "https://github.com/Neylivo/neylivo/releases/download/v1.562.1/NeyLivo-Setup-1.562.1.apk",
+    "bytes": 18258836
   },
-  "fetchedAt": "2026-08-13T10:03:42.035Z"
+  "fetchedAt": "2026-08-13T10:15:29.371Z"
 }
